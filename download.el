@@ -8,39 +8,24 @@
 
 
 
-(defvar http-result-processing 'remove-header-test)
+(defvar http-result-processing #'remove-header-test)
 
 
-(defun remove-header-to-buffer (status) 
+(defun remove-header (buffer) 
   "Delete HTTP header"
-  (with-current-buffer (current-buffer)
+  (with-current-buffer buffer
     (goto-char (point-min))
     (when (string-match "^.* 200 OK$" (thing-at-point 'line))
     (search-forward "\n\n")
-    (delete-region (point-min) (point)))
-    (switch-to-buffer (current-buffer))))
-
-(defun remove-header-to-string (status)
-   (with-temp-buffer
-    (goto-char (point-min))
-    (when (string-match "^.* 200 OK$" (thing-at-point 'line))
-      (search-forward "\n\n")
-      (delete-region (point-min) (point)))
-    (message "test output: '%s'" (buffer-name (current-buffer)))
-    (buffer-string)))
-
-(defun remove-header-test (status)
-  (with-temp-buffer
-    (message "test out: %s" (buffer-name (current-buffer)))
-    (insert "some very message")
-    (buffer-string)))
+    (delete-region (point-min) (point)))))
 
 
 (defun call-generic (url)
   "Download from url"
   (let ((url-request-method "GET"))
-    (message "http-result-processing: %s" http-result-processing)
-    (url-retrieve url http-result-processing)))
+    (with-current-buffer (url-retrieve-synchronously url)
+      (remove-header (current-buffer))
+      (buffer-string))))
 
 
 (defun call-ebi-eye (term domain)

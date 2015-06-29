@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiments version="1.2" revision="100915" total="1" total-samples="8" total-assays="8">
+  <experiment>
+    <species>Saccharomyces cerevisiae</species>
+    <rawdatafiles available="true"/>
+    <processeddatafiles available="true"/>
+    <sampleattribute>
+      <category>BioSourceType</category>
+      <value>fresh_sample</value>
+    </sampleattribute>
+    <sampleattribute>
+      <category>IndividualGeneticCharacteristics</category>
+      <value>MATa ade2 his3 leu2 trp1 ura3 mlp2::TRP1 yra1::HIS3 [pLEU2-HA-GFP-yra1-8]</value>
+      <value>MATa ade2 his3 leu2 trp1 ura3 mlp2::TRP1 yra1::HIS3 [pLEU2-YRA1]</value>
+      <value>MATa ade2 his3 leu2 trp1 ura3 yra1::HIS3 [pLEU2-HA-GFP-yra1-8]</value>
+      <value>MATa ade2 his3 leu2 trp1 ura3 yra1::HIS3 [pLEU2-YRA1]</value>
+    </sampleattribute>
+    <sampleattribute>
+      <category>Organism</category>
+      <value>Saccharomyces cerevisiae</value>
+    </sampleattribute>
+    <sampleattribute>
+      <category>Sex</category>
+      <value>mating_type_a</value>
+    </sampleattribute>
+    <sampleattribute>
+      <category>StrainOrLine</category>
+      <value>W303</value>
+    </sampleattribute>
+    <experimentalfactor>
+      <name>Genotype</name>
+      <value>MATa ade2 his3 leu2 trp1 ura3 mlp2::TRP1 yra1::HIS3 [pLEU2-HA-GFP-yra1-8]</value>
+      <value>MATa ade2 his3 leu2 trp1 ura3 mlp2::TRP1 yra1::HIS3 [pLEU2-YRA1]</value>
+      <value>MATa ade2 his3 leu2 trp1 ura3 yra1::HIS3 [pLEU2-HA-GFP-yra1-8]</value>
+      <value>MATa ade2 his3 leu2 trp1 ura3 yra1::HIS3 [pLEU2-YRA1]</value>
+    </experimentalfactor>
+    <miamescores>
+      <reportersequencescore>1</reportersequencescore>
+      <protocolscore>0</protocolscore>
+      <factorvaluescore>1</factorvaluescore>
+      <derivedbioassaydatascore>1</derivedbioassaydatascore>
+      <measuredbioassaydatascore>1</measuredbioassaydatascore>
+      <overallscore>4</overallscore>
+    </miamescores>
+    <id>27671</id>
+    <accession>E-MEXP-130</accession>
+    <name>Transcription profiling of four yeast strains grown in SC medium and shifted for 2.5h to 37C: YRA1 wild type, YRA1 mlp2916; GFP-yra1-8, and GFP-yra1-8 mlp2916</name>
+    <experimenttype>transcription profiling by array</experimenttype>
+    <releasedate>2004-12-31</releasedate>
+    <submissiondate>2004-07-01</submissiondate>
+    <lastupdatedate>2014-05-02</lastupdatedate>
+    <samples>8</samples>
+    <assays>8</assays>
+    <arraydesign>
+      <id>10927</id>
+      <accession>A-AFFY-27</accession>
+      <name>Affymetrix GeneChip Yeast Genome S98 [YG_S98]</name>
+      <count>8</count>
+      <legacy_id>119528504</legacy_id>
+    </arraydesign>
+    <bioassaydatagroup>
+      <id/>
+      <name>rawData</name>
+      <bioassaydatacubes>8</bioassaydatacubes>
+      <arraydesignprovider/>
+      <dataformat>rawData</dataformat>
+      <bioassays>8</bioassays>
+      <isderived>0</isderived>
+    </bioassaydatagroup>
+    <bioassaydatagroup>
+      <id/>
+      <name>scan</name>
+      <bioassaydatacubes>8</bioassaydatacubes>
+      <arraydesignprovider/>
+      <dataformat>scan</dataformat>
+      <bioassays>8</bioassays>
+      <isderived>0</isderived>
+    </bioassaydatagroup>
+    <bioassaydatagroup>
+      <id/>
+      <name>processedDataMatrix</name>
+      <bioassaydatacubes>1</bioassaydatacubes>
+      <arraydesignprovider/>
+      <dataformat>processedDataMatrix</dataformat>
+      <bioassays>1</bioassays>
+      <isderived>1</isderived>
+    </bioassaydatagroup>
+    <bibliography>
+      <accession>15692572</accession>
+      <authors>Vinciguerra P, Iglesias N, Camblong J, Zenklusen D, Stutz F.</authors>
+      <title>Perinuclear Mlp proteins downregulate gene expression in response to a defect in mRNA export.</title>
+      <issue>4</issue>
+      <pages>813-23</pages>
+      <publication>EMBO J</publication>
+      <volume>24</volume>
+      <year>2005</year>
+    </bibliography>
+    <provider>
+      <contact>Francoise Stutz</contact>
+      <role>submitter</role>
+      <email>francoise.stutz@cellbio.unige.ch</email>
+    </provider>
+    <experimentdesign>individual genetic characteristics</experimentdesign>
+    <description>
+      <id/>
+      <text>Comparison of mRNA levels in four yeast strains grown in SC medium and shifted for 2.5h to 37C:  YRA1 wild-type, YRA1 mlp2Δ GFP-yra1-8, and GFP-yra1-8 mlp2Δ</text>
+    </description>
+    <protocol>
+      <id>80474</id>
+      <accession>P-MEXP-4357</accession>
+    </protocol>
+    <protocol>
+      <id>80477</id>
+      <accession>P-MEXP-4355</accession>
+    </protocol>
+    <protocol>
+      <id>80475</id>
+      <accession>P-MEXP-4334</accession>
+    </protocol>
+    <protocol>
+      <id>80479</id>
+      <accession>P-MEXP-4333</accession>
+    </protocol>
+    <protocol>
+      <id>80476</id>
+      <accession>P-MEXP-4390</accession>
+    </protocol>
+    <protocol>
+      <id>51</id>
+      <accession>P-AFFY-6</accession>
+    </protocol>
+    <protocol>
+      <id>80478</id>
+      <accession>P-MEXP-4389</accession>
+    </protocol>
+    <protocol>
+      <id>63</id>
+      <accession>Affymetrix:Protocol:ExpressionStat</accession>
+    </protocol>
+    <organism>Saccharomyces cerevisiae</organism>
+    <files>
+      <!--
+This section is deprecated and unsupported.
+Please use webservice located at:
+    http://www.ebi.ac.uk/arrayexpress/xml/files
+to obtain detailed information on files available for the experiment.
+For more information, please go to:
+    http://www.ebi.ac.uk/arrayexpress/help/programmatic_access.html
+                -->
+      <raw name="E-MEXP-130.raw.1.zip" count="true" celcount="0"/>
+      <fgem name="E-MEXP-130.processed.1.zip" available="true"/>
+      <idf name="E-MEXP-130.idf.txt"/>
+      <sdrf name="E-MEXP-130.sdrf.txt"/>
+    </files>
+  </experiment>
+</experiments>

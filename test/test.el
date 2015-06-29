@@ -3,6 +3,7 @@
 
 (require 'f)
 
+
 (defconst test-source-path
   (f-parent (f-this-file)))
 
@@ -10,7 +11,9 @@
   (f-parent test-source-path))
 
 ;; simplest sollution
-(load-file "../download.el")
+(require 'download (f-expand "download.el" source-path))
+
+;; test initialising taken from article http://rejeep.github.io/emacs/testing/cask/ert-runner/2013/09/26/unit-testing-in-emacs.html
 
 (prin1 *data-sources*)
 

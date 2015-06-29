@@ -24,9 +24,19 @@
     (should (> (length out-text) 0))))
 
 
-(ert-deftest test-get-nodes ()
-  "Take nodes from experiment 'E-MEXP-130'"
-  (message "^^^^^^^^^^^^^^^^^^^^^^")
-  (let ((experiment (get-experiment-array-express "E-MEXP-130")))
-    (message "experiment node: %s\n" experiment)
-    (should (listp experiment))))
+;; (ert-deftest test-get-nodes ()
+;;   "Take nodes from experiment 'E-MEXP-130'"
+;;   (message "^^^^^^^^^^^^^^^^^^^^^^")
+;;   (let ((experiment (get-experiment-array-express "E-MEXP-130")))
+;;     (message "experiment node: %s\n" experiment)
+;;     (should (listp experiment))))
+
+
+(ert-deftest test-sampleattributes ()
+  "Test parsoing process of sampleattributes nodes"
+  (message "&&&&&&&&&&&&&&&&")
+  (let* ((experiment (get-experiment-array-express "E-MEXP-130"))
+	(sattr (assoc "sample-attribute" experiment)))
+    (message "sample-attribute node: %S\n" (assoc "sample-attribute" experiment))
+    (should (listp experiment)))
+  )

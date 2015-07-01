@@ -22,7 +22,8 @@
 
 (defun call-generic (url)
   "Download from url"
-  (let ((url-request-method "GET"))
+  (let ((url-request-method "GET")
+	(url-mime-charset-string "utf-8;q=1"))
     (with-current-buffer (url-retrieve-synchronously url)
       (remove-header (current-buffer))
       (buffer-string))))

@@ -44,4 +44,4 @@
 	 (template (cdr (assoc "array-express" *data-sources*)))
 	 (final-url (format template domain-text accession)))
     (message "final url: %s" final-url)
-    (call-generic final-url)))
+    (decode-coding-string (call-generic final-url) 'utf-8-emacs)))

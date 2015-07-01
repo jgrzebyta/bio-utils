@@ -22,8 +22,11 @@
 	 (experimental-factor-node (car (xml-get-children experiment-node 'experimentalfactor)))
 	 (description-node (car (xml-get-children experiment-node 'description)))
 	 (description-text (first (xml-node-children (car (xml-get-children description-node 'text)))))
-	 (sampleattribute-nodes (xml-get-children experiment-node 'sampleattribute)))
+	 (sampleattribute-nodes (xml-get-children experiment-node 'sampleattribute))
+	 (name (first (xml-node-children (car (xml-get-children experiment-node 'name))))))
+    (message "name: %S" name)
     (push (cons "accession" accession) to-return )
+    (push (cons "name" name) to-return)
     (push (cons "total-experiments" total-attr) to-return)
     (push (cons "total-smaples" total-samples-attr) to-return)
     (push (cons "total-assays" total-assays-attr) to-return)
@@ -42,10 +45,11 @@
 	  for category = (first (xml-node-children (car (xml-get-children node 'category))))
 	  for values = (xml-get-children node 'value)
 	  for value = nil
-	  do (loop for v in values
+	  do (progn
+	      (loop for v in values
 		   for v-value = (first (xml-node-children v))
-		   do (push v-value value)
-		   (reverse value))
+		   do (push v-value value))
+	      (reverse value))
 	  collect (cons category value)
 	  )))
 

@@ -3,6 +3,7 @@
 
 (require 'download)
 (require 'xml)
+(require 'cl)
 
 
 (defun get-experiment-array-express (accession)
@@ -53,7 +54,7 @@
   "Parse experimental factor description from EXPERIMENAL-FACTOR-NODE."
   (let ((name (first (xml-node-children (car (xml-get-children experimental-factor-node 'name)))))
 	(value-nodes (loop for v in (xml-get-children experimental-factor-node 'value)
-			   collect (first(xml-node-children v)))))
+			   collect (first (xml-node-children v)))))
     (concat "\"" name "\"" " with variants: " (mapconcat (lambda (x) (format "%s" x)) value-nodes ", "))))
 
 

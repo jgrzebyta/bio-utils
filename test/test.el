@@ -33,10 +33,14 @@
 
 
 (ert-deftest test-sampleattributes ()
-  "Test parsoing process of sampleattributes nodes"
+  "Test parsing of sampleattributes nodes"
   (message "&&&&&&&&&&&&&&&&")
   (let* ((experiment (get-experiment-array-express "E-MEXP-130"))
 	(sattr (assoc "sample-attribute" experiment)))
     (message "sample-attribute node: %S\n" (assoc "sample-attribute" experiment))
     (should (listp experiment)))
+  )
+
+(ert-deftest test-bibliography ()
+  "Test parsing bibliography"
   )

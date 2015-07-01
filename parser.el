@@ -33,9 +33,8 @@
     (push (cons "experimental-factor" (--experimental-factor-parser experimental-factor-node)) to-return)
     (push (cons "sample-attribute" (--sampleattribute-nodes-parser sampleattribute-nodes)) to-return)
     (push (cons "description" description-text) to-return)
+    (push (cons "bibiography" --bibliography-parser) to-return)
     ))
-
-
 
 
 (defun --sampleattribute-nodes-parser (sampleattribute-nodes)
@@ -61,4 +60,24 @@
 			   collect (first (xml-node-children v)))))
     (concat "\"" name "\"" " with variants: " (mapconcat (lambda (x) (format "%s" x)) value-nodes ", "))))
 
+
+(defun --bibliography-parser (experimental-factor-node)
+  "Parse bibliography record from EXPERIMENAL-FACTOR-NODE."
+  (let ((bibliography-node (car (xml-get-children experimental-factor-node 'bibliography)))
+	(accession (car (xml-node-children (xml-get-children bibliography-node 'accession))))
+	(authors (car (xml-node-children (xml-get-children bibliography-node 'authors))))
+	(title (car (xml-node-children (xml-get-children bibliography-node 'title))))
+	(issue (car (xml-node-children (xml-get-children bibliography-node 'issue))))
+	(pages (car (xml-node-children (xml-get-children bibliography-node 'pages))))
+	(publication (car (xml-node-children (xml-get-children bibliography-node 'publication))))
+	(volume (car (xml-node-children (xml-get-children bibliography-node 'volume))))
+	(year (car (xml-node-children (xml-get-children bibliography-node 'year)))))
+    (list (cons "accession" accession)
+	  (cons "authors" authors)
+	  (cons "title" title)
+	  (cons "issue" issue)
+	  (cons "pages" pages)
+	  (cons "publication" publication)
+	  (cons "volume" volume)
+	  (cons "year" year))))
 

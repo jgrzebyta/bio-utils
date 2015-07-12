@@ -1,8 +1,14 @@
+;; useful for QuickLoad for manual launching 
+;; (ql:quickload 'drakma)
+;; (ql:quickload 'cl-html5-parser)
+;; (ql:quickload 'cl-ppcre)
+;; (ql:quickload 'st-json)
+
 
 (require 'drakma)
 (require 'cl-html5-parser)
 (require 'cl-ppcre)
-(require 'cl-json)
+(require 'st-json)
 
 (defun -get-bootstrap-json-as-string (in-string)
   "Extract value of bootstappedData from IN-STRING and return as string."
@@ -21,7 +27,7 @@
        (base-url (format nil "http://www.yeastgenome.org/search?query=~a" id))
        (page (drakma:http-request base-url))
        (json-string (-get-bootstrap-json-as-string page))
-       (json-object (json:decode-json-from-string json-string)))
+       (json-object (st-json:read-json-from-string json-string)))
   (format t "url request: ~s~%" base-url)
   (format t "json-string: \"~a\"~%" json-object)
 

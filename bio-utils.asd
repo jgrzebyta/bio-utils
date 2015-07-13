@@ -13,7 +13,7 @@
                (:file "sgd-parser")))
 
 (asdf:defsystem #:bio-utils-test
-  :depends-on (#bio-utils)
+  :depends-on (#:bio-utils #:lisp-unit2)
   :serial t
   :components ((:module "test"
-			:components ((:file "package")))))
+			:components ((:file "sgd-test")))))

@@ -25,7 +25,6 @@
 	 (script (nth 3 head))
 	 (code (ppcre:regex-replace-all "\\r?\\n?" (nth 2 script) "")))
     (multiple-value-bind (result groups) (ppcre:scan-to-strings "var bootstrappedData = (\{.+\});" code)
-      (format t "groups type: ~a~%" (type-of groups))
       (format nil "~s" result)
       (elt groups 0)  ;; unpack data from vector
       )))
@@ -43,8 +42,18 @@
 
 (defun --load-go (json-objects)
   "Load Gene Ontology terms"
-  (let (to-return (make-hash-table))
-    #TODO
+  (let ((to-return (make-hash-table :test #'equal)))
+    (loop for term in '("manual_molecular_function_terms" "manual_biological_process_terms" "manual_cellular_component_terms")
+	  for response-nodes = nil
+       do (progn
+	    (setq term-nodes (getjso term json-objects))
+	    (setq response-nodes
+		  (loop for node in term-nodes
+		     for response = nil
+		        do (setq response (--load-go-atom node))
+		     collect response))
+	    (setf (gethash term to-return) response-nodes))) ;; load return hash-table
+    to-return ;; return final result
     )
   )
 

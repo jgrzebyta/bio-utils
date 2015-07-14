@@ -1,5 +1,5 @@
 
-
+ 
 ;; Saccharomyces Genome Database web page parser
 ;; This parser collects information from yeast strain web page and converts it into useful hashmap.
 ;;
@@ -32,12 +32,12 @@
 (defun --load-aliases (json-objects)
   "Load 'locusData.qualities.aliases' field from json-object and load into return-hash."
 	 (loop for item in json-objects
-	       for to-return = (make-hash-table)
+	       for to-return = (make-hash-table :test #'equal)
 	    do (progn
-		 (setf (gethash 'category to-return) (getjso "category" item))
-		 (setf (gethash 'display-name to-return) (getjso "display_name" item))
-		 (setf (gethash 'source to-return) (getjso* "source.display_name" item))
-		 (setf (gethash 'link to-return) (getjso "link" item)))
+		 (setf (gethash "category" to-return) (getjso "category" item))
+		 (setf (gethash "display-name" to-return) (getjso "display_name" item))
+		 (setf (gethash "source" to-return) (getjso* "source.display_name" item))
+		 (setf (gethash "link" to-return) (getjso "link" item)))
 	    collect to-return))
 
 (defun --load-go (json-objects)
@@ -67,14 +67,14 @@
 
 (defun --get-json-as-hashmap (json-object)
   "converts internal type of jso instance json-object into custom hashmap"
-  (let ((to-return (make-hash-table))) ;; probably the block of setf-s bellow might be shorter.
-    (setf (gethash 'display-name to-return) (getjso "displayName" json-object))
-    (setf (gethash 'format-name to-return) (getjso "formatName" json-object))
-    (setf (gethash 'locus-id to-return) (getjso "locusId" json-object))
-    (setf (gethash 'locus-link to-return) (getjso "locusLink" json-object))
-    (setf (gethash 'uniprot-id to-return) (getjso* "locusData.uniprotid" json-object))
-    (setf (gethash 'aliases to-return) (--load-aliases (getjso* "locusData.aliases" json-object)))
-    (setf (gethash 'go-terms to-return) (--load-go (getjso* "locusData.go_overview" json-object)))
+  (let ((to-return (make-hash-table :test #'equal))) ;; probably the block of setf-s bellow might be shorter.
+    (setf (gethash "display-name" to-return) (getjso "displayName" json-object))
+    (setf (gethash "format-name" to-return) (getjso "formatName" json-object))
+    (setf (gethash "locus-id" to-return) (getjso "locusId" json-object))
+    (setf (gethash "locus-link" to-return) (getjso "locusLink" json-object))
+    (setf (gethash "uniprot-id" to-return) (getjso* "locusData.uniprotid" json-object))
+    (setf (gethash "aliases" to-return) (--load-aliases (getjso* "locusData.aliases" json-object)))
+    (setf (gethash "go-terms" to-return) (--load-go (getjso* "locusData.go_overview" json-object)))
 	to-return
     )
 )

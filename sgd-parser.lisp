@@ -44,7 +44,8 @@
   "Load Gene Ontology terms"
   (let ((to-return (make-hash-table :test #'equal)))
     (loop for term in '("manual_molecular_function_terms" "manual_biological_process_terms" "manual_cellular_component_terms")
-	  for response-nodes = nil
+	 for term-nodes = nil
+	 for response-nodes = nil
        do (progn
 	    (setq term-nodes (getjso term json-objects))
 	    (setq response-nodes

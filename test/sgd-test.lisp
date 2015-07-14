@@ -7,4 +7,4 @@
 
 (lisp-unit2:define-test sgd-simple-test
     ()
-    (get-sgd "YPL252C"))
+ (format t "data str: ~%~a~%" (inspect (get-sgd "YPL252C"))))

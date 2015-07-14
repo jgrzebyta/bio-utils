@@ -1,0 +1,2444 @@
+
+#S(ST-JSON:JSO
+   :ALIST ((displayName . RMA1) (formatName . YKL132C) (locusId . 2381)
+           (locusLink . /locus/S000001615/overview)
+           (locusData
+            . #S(ST-JSON:JSO
+                 :ALIST ((urls
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_S288C)
+                                     (display_name . ATCC/WashU Clones)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . http://browse.yeastgenome.org/fgb2/gbrowse/scgenome/?name=YKL132C%3A-10000..10000;label=Landmarks%3Aoverview;label=SGD+Everything;label=SGD+Clones)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-12-17)
+                                     (id . 1317027)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_MUTANT_STRAINS)
+                                     (display_name
+                                      . Addgene Plasmid Repository)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . Addgene)
+                                                   (link . NULL) (id . 135)
+                                                   (format_name . Addgene))))
+                                     (link
+                                      . http://www.addgene.org/browse/gene/853727/)
+                                     (created_by . EDITH)
+                                     (date_created . 2014-09-04)
+                                     (id . 1818342)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_LSP)
+                                     (display_name . All Associated Seq)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/getGenBank.pl?locus=S000001615)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1901884)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_HOMOLOGS)
+                                     (display_name . Ashbya (AGD))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . AGD)
+                                                   (link . NULL) (id . 67)
+                                                   (format_name . AGD))))
+                                     (link
+                                      . http://agd.vital-it.ch/Ashbya_gossypii/unisearch?type=Gene&q=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210728)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_SECTION)
+                                     (display_name . BLASTN)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/blast-sgd.pl?name=YKL132C)
+                                     (created_by . OTTO)
+                                     (date_created . 2014-07-23)
+                                     (id . 1738149)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_S288C)
+                                     (display_name . BLASTN)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link . /blast-sgd?name=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210717)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_OTHER_SPECIES)
+                                     (display_name . BLASTN vs. fungi)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link . /blast-fungal?name=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1209525)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_SECTION)
+                                     (display_name . BLASTP)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/blast-sgd.pl?name=YKL132C&suffix=prot)
+                                     (created_by . OTTO)
+                                     (date_created . 2014-07-23)
+                                     (id . 1738150)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_S288C)
+                                     (display_name . BLASTP)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /blast-sgd?name=YKL132C&type=protein)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210719)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_OTHER_SPECIES)
+                                     (display_name . BLASTP at NCBI)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://blast.ncbi.nlm.nih.gov/Blast.cgi?ALIGNMENTS=50&AUTO_FORMAT=Semiauto&CDD_SEARCH=on&CLIENT=web&COMPOSITION_BASED_STATISTICS=on&DATABASE=nr&DESCRIPTIONS=100&EXPECT=10&FILTER=L&FORMAT_OBJECT=Alignment&FORMAT_TYPE=HTML&GAPCOSTS=11+1&I_THRESH=0.001&LAYOUT=TwoWindows&MATRIX_NAME=BLOSUM62&NCBI_GI=on&PAGE=Proteins&PROGRAM=blastp&SET_DEFAULTS.x=29&SET_DEFAULTS.y=13&SHOW_LINKOUT=on&SHOW_OVERVIEW=on&WORD_SIZE=3&END_OF_HTTPGET=Yes&QUERY=NP_012790.1)
+                                     (created_by . KARA)
+                                     (date_created . 2003-03-27)
+                                     (id . 1623912)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_OTHER_SPECIES)
+                                     (display_name . BLASTP vs. fungi)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /blast-fungal?name=YKL132C&type=protein)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210723)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_INTERACTION)
+                                     (display_name . BOND)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . BOND)
+                                                   (link . NULL) (id . 37)
+                                                   (format_name . BOND))))
+                                     (link
+                                      . http://bond.unleashedinformatics.com/Action?textquery=RecordType:%20(interaction%20complex%20pathway%20)%20AND%20YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2005-11-28)
+                                     (id . 1295819)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_INTERACTION)
+                                     (display_name . BioGRID)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . BioGRID)
+                                                   (link . NULL) (id . 36)
+                                                   (format_name . BioGRID))))
+                                     (link . http://thebiogrid.org/34004)
+                                     (created_by . EURIE)
+                                     (date_created . 2006-04-07)
+                                     (id . 1646110)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_INTERACTION)
+                                     (display_name . CYC2008 (complexes))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . CYC2008)
+                                                   (link . NULL) (id . 99)
+                                                   (format_name . CYC2008))))
+                                     (link
+                                      . http://wodaklab.org/cyc2008/searchable?q=YKL132C)
+                                     (created_by . JULIEP)
+                                     (date_created . 2009-01-09)
+                                     (id . 1376924)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_EXPRESSION)
+                                     (display_name
+                                      . Cell cycle and metabolic oscillation)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SCEPTRANS)
+                                                   (link . NULL) (id . 86)
+                                                   (format_name . SCEPTRANS))))
+                                     (link
+                                      . http://moment.utmb.edu/cgi-bin/sceptrans.cgi?locus=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2007-05-14)
+                                     (id . 1874821)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_EXPRESSION)
+                                     (display_name
+                                      . Cell cycle transcript profile)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . FHCRC)
+                                                   (link . NULL) (id . 80)
+                                                   (format_name . FHCRC))))
+                                     (link
+                                      . http://webapps.fhcrc.org/labs/noble/cellcycle/getOrf.php?orf=YKL132C)
+                                     (created_by . NASH)
+                                     (date_created . 2006-08-22)
+                                     (id . 1826952)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_INTERACTION)
+                                     (display_name . Complexome)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . Complexome)
+                                                   (link . NULL) (id . 19)
+                                                   (format_name
+                                                    . Complexome))))
+                                     (link
+                                      . http://complexome.holstegelab.nl/cgi-bin/Dataset/complex.cgi?action=search&dataset=432&names=YKL132C)
+                                     (created_by . FISK)
+                                     (date_created . 2010-06-28)
+                                     (id . 1488932)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_EXPRESSION)
+                                     (display_name . Cyclebase)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . Cyclebase)
+                                                   (link . NULL) (id . 100)
+                                                   (format_name . Cyclebase))))
+                                     (link
+                                      . http://cyclebase.org/CyclebasePage?type=4932&id=YKL132C)
+                                     (created_by . FISK)
+                                     (date_created . 2009-10-14)
+                                     (id . 1885542)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_MUTANT_STRAINS)
+                                     (display_name . DNASU Plasmid Repository)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . DNASU Plasmid Repository)
+                                                   (link . NULL) (id . 13)
+                                                   (format_name
+                                                    . DNASU_Plasmid_Repository))))
+                                     (link
+                                      . http://dnasu.asu.edu/DNASU/RefseqSearchContinue.do?cdna=true&shrna=true&genomicfragment=true&tfbindsite=true&genome=true&pagesize=50&species=Saccharomyces%20cerevisiae&refseqType=cDNA&searchType=SGD%20Number&searchString=YKL132C)
+                                     (created_by . MARIA)
+                                     (date_created . 2010-05-10)
+                                     (id . 1476135)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_INTERACTION)
+                                     (display_name . DRYGIN)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . DRYGIN)
+                                                   (link . NULL) (id . 103)
+                                                   (format_name . DRYGIN))))
+                                     (link
+                                      . http://drygin.ccbr.utoronto.ca/VISUALIZATION/getInteractions.pl?keys=YKL132C)
+                                     (created_by . DWIGHT)
+                                     (date_created . 2012-06-18)
+                                     (id . 1504215)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_S288C)
+                                     (display_name . Design Primers)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link . /cgi-bin/web-primer?name=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1209521)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_LSP)
+                                     (display_name . E.C.)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . ExPASy)
+                                                   (link . NULL) (id . 42)
+                                                   (format_name . ExPASy))))
+                                     (link
+                                      . http://www.expasy.org/enzyme/6.3.2.17)
+                                     (created_by . EURIE)
+                                     (date_created . 2008-02-27)
+                                     (id . 1905888)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_MUTANT_STRAINS)
+                                     (display_name . EUROSCARF (Germany))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . EUROSCARF)
+                                                   (link . NULL) (id . 34)
+                                                   (format_name . EUROSCARF))))
+                                     (link
+                                      . http://web.uni-frankfurt.de/fb15/mikro/euroscarf/data/YKL132c.html)
+                                     (created_by . CHANDRA)
+                                     (date_created . 2003-08-05)
+                                     (id . 1573836)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_LSP)
+                                     (display_name . Entrez Gene)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/gene/853727)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1924942)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_LSP)
+                                     (display_name . Entrez RefSeq Protein)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov:80/entrez/viewer.fcgi?val=NP_012790.1)
+                                     (created_by . KARA)
+                                     (date_created . 2001-12-21)
+                                     (id . 1920091)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_EXPRESSION)
+                                     (display_name . Expression Summary)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link . /locus/YKL132C/expression)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1840124)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_EXPRESSION)
+                                     (display_name . FuncBase)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . YeastFunc)
+                                                   (link . NULL) (id . 95)
+                                                   (format_name . YeastFunc))))
+                                     (link
+                                      . http://func.med.harvard.edu/yeast/genes/list_functional_scores/S000001615)
+                                     (created_by . JULIEP)
+                                     (date_created . 2008-07-17)
+                                     (id . 1953147)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_OTHER_SPECIES)
+                                     (display_name . Fungal Alignment)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/FUNGI/showAlign?locus=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210714)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_HOMOLOGS)
+                                     (display_name
+                                      . Fungal Orthogroups Repository)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . Fungal Orthogroups Repository)
+                                                   (link . NULL) (id . 90)
+                                                   (format_name
+                                                    . Fungal_Orthogroups_Repository))))
+                                     (link
+                                      . http://www.broad.mit.edu/cgi-bin/regev/orthogroups/show_orthogroup.cgi?orf=YKL132C)
+                                     (created_by . MARIA)
+                                     (date_created . 2009-01-22)
+                                     (id . 1431240)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE)
+                                     (display_name . GBrowse)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . http://browse.yeastgenome.org/fgb2/gbrowse/scgenome/?name=YKL132C)
+                                     (created_by . OTTO)
+                                     (date_created . 2014-07-23)
+                                     (id . 1738148)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PROTEIN_PROTEIN_DATABASES)
+                                     (display_name . GPMdb (Mass Spec.))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . GPMDB)
+                                                   (link . NULL) (id . 68)
+                                                   (format_name . GPMDB))))
+                                     (link
+                                      . http://gpmdb.proteome.ca/thegpm-cgi/dblist_label.pl?label=YKL132C)
+                                     (created_by . FISK)
+                                     (date_created . 2004-11-24)
+                                     (id . 1276327)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE)
+                                     (display_name . Gene/Sequence Resources)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/seqTools?back=1&seqname=YKL132C)
+                                     (created_by . OTTO)
+                                     (date_created . 2014-07-23)
+                                     (id . 1738146)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_INTERACTION)
+                                     (display_name . GeneMANIA)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . GeneMANIA)
+                                                   (link . NULL) (id . 18)
+                                                   (format_name . GeneMANIA))))
+                                     (link
+                                      . http://genemania.org/link?o=4932&g=YKL132C)
+                                     (created_by . FISK)
+                                     (date_created . 2010-06-28)
+                                     (id . 1499780)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_EXPRESSION)
+                                     (display_name . Genevestigator)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . Genevestigator)
+                                                   (link . NULL) (id . 3)
+                                                   (format_name
+                                                    . Genevestigator))))
+                                     (link
+                                      . https://www.genevestigator.com/gv/directlink.jsp?geneIDs=YKL132C&organism=SC&tool=T_PRO_MU&source=genevestigator)
+                                     (created_by . NASH)
+                                     (date_created . 2009-07-01)
+                                     (id . 1879404)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_EXPRESSION)
+                                     (display_name . GermOnline)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . GermOnline)
+                                                   (link . NULL) (id . 41)
+                                                   (format_name
+                                                    . GermOnline))))
+                                     (link
+                                      . http://www.germonline.org/Saccharomyces_cerevisiae/geneview?gene=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2006-09-20)
+                                     (id . 1844829)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_PHENOTYPE_RESOURCES)
+                                     (display_name
+                                      . HIP HOP Profile (Novartis))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . HIP HOP profile database (Novartis))
+                                                   (link . NULL) (id . 132)
+                                                   (format_name
+                                                    . HIP_HOP_profile_database_(Novartis)))))
+                                     (link
+                                      . http://www.fmi.ch/hiphop/profile/gene?ID=YKL132C)
+                                     (created_by . MARIA)
+                                     (date_created . 2014-03-21)
+                                     (id . 1794073)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_PHENOTYPE_RESOURCES)
+                                     (display_name
+                                      . HIPHOP chemogenomics database (UBC))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . HIPHOP chemogenomics database (UBC))
+                                                   (link . NULL) (id . 134)
+                                                   (format_name
+                                                    . HIPHOP_chemogenomics_database_(UBC)))))
+                                     (link
+                                      . http://chemogenomics.pharmacy.ubc.ca/HIPHOP/index.php?q=YKL132C)
+                                     (created_by . MARIA)
+                                     (date_created . 2014-09-03)
+                                     (id . 1809563)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_INTERACTION)
+                                     (display_name . IMP)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . IMP)
+                                                   (link . NULL) (id . 105)
+                                                   (format_name . IMP))))
+                                     (link
+                                      . http://imp.princeton.edu/predictions/gene/?network=yeast-context-global&gene=YKL132C)
+                                     (created_by . FISK)
+                                     (date_created . 2013-10-07)
+                                     (id . 1328817)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_INTERACTION)
+                                     (display_name . InterologFinder)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . InterologFinder)
+                                                   (link . NULL) (id . 21)
+                                                   (format_name
+                                                    . InterologFinder))))
+                                     (link
+                                      . http://www.interologfinder.org/simpleIfWS?taxid=4932&genes=853727)
+                                     (created_by . FISK)
+                                     (date_created . 2011-07-18)
+                                     (id . 1673509)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROEIN_LOCALIZATION)
+                                     (display_name . LoQate)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . LoQate)
+                                                   (link . NULL) (id . 108)
+                                                   (format_name . LoQate))))
+                                     (link
+                                      . http://www.weizmann.ac.il/molgen/loqate/gene/view/3764)
+                                     (created_by . RAMA)
+                                     (date_created . 2013-07-09)
+                                     (id . 1665779)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE)
+                                     (display_name . ORF Map)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/ORFMAP/ORFmap?dbid=S000001615)
+                                     (created_by . OTTO)
+                                     (date_created . 2014-07-23)
+                                     (id . 1738147)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROEIN_LOCALIZATION)
+                                     (display_name . Organelle DB)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . Organelle DB)
+                                                   (link . NULL) (id . 91)
+                                                   (format_name
+                                                    . Organelle_DB))))
+                                     (link
+                                      . http://organelledb.lsi.umich.edu/gene.php?sys_name=YKL132C)
+                                     (created_by . MARIA)
+                                     (date_created . 2007-09-20)
+                                     (id . 1382728)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_HOMOLOGS)
+                                     (display_name . P-POD)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . P-POD)
+                                                   (link . NULL) (id . 88)
+                                                   (format_name . P-POD))))
+                                     (link
+                                      . http://ppod.princeton.edu/cgi-bin/ppod.cgi?an=2&s=S000001615)
+                                     (created_by . FISK)
+                                     (date_created . 2007-08-29)
+                                     (id . 1554509)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_HOMOLOGS)
+                                     (display_name . PDB Homologs)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/protein/get3d?sgdid=S000001615)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1554506)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_PHENOTYPE_RESOURCES)
+                                     (display_name . PROPHECY)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . PROPHECY)
+                                                   (link . NULL) (id . 57)
+                                                   (format_name . PROPHECY))))
+                                     (link
+                                      . http://prophecy.lundberg.gu.se/SGDLink.aspx?ORF=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210716)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PROTEIN_PROTEIN_DATABASES)
+                                     (display_name . Pfam domains)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . Sanger)
+                                                   (link . NULL) (id . 82)
+                                                   (format_name . Sanger))))
+                                     (link
+                                      . http://pfam.sanger.ac.uk/protein?entry=P36001)
+                                     (created_by . JULIEP)
+                                     (date_created . 2006-10-20)
+                                     (id . 1581680)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_MODIFICATIONS)
+                                     (display_name . PhosphoGRID)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . BioGRID)
+                                                   (link . NULL) (id . 36)
+                                                   (format_name . BioGRID))))
+                                     (link
+                                      . http://www.phosphogrid.org/sites/34004)
+                                     (created_by . EURIE)
+                                     (date_created . 2010-06-09)
+                                     (id . 1646111)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_MODIFICATIONS)
+                                     (display_name . PhosphoPep Database)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . PhosphoPep Database)
+                                                   (link . NULL) (id . 98)
+                                                   (format_name
+                                                    . PhosphoPep_Database))))
+                                     (link
+                                      . http://www.sbeams.org/devDC/sbeams/cgi/Glycopeptide/peptideSearch.cgi?action=Show_hits_form;search_type=accession;organism=sce;search_term=YKL132C)
+                                     (created_by . MARIA)
+                                     (date_created . 2009-01-09)
+                                     (id . 1376534)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_HOMOLOGS)
+                                     (display_name . PhylomeDB)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . PhylomeDB)
+                                                   (link . NULL) (id . 2)
+                                                   (format_name . PhylomeDB))))
+                                     (link
+                                      . http://phylomedb.org/?seqid=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2009-03-02)
+                                     (id . 1449973)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_HOMOLOGS)
+                                     (display_name . PomBase)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . PomBase)
+                                                   (link . NULL) (id . 24)
+                                                   (format_name . PomBase))))
+                                     (link
+                                      . http://www.pombase.org/spombe/result/SPAC227.09)
+                                     (created_by . RAMA)
+                                     (date_created . 2013-12-19)
+                                     (id . 1617474)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_S288C)
+                                     (display_name . Restriction Fragment Map)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/PATMATCH/RestrictionMapper?name=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1209522)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_S288C)
+                                     (display_name
+                                      . Restriction Fragment Sizes)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/getSeq?seq=YKL132C&flankl=0&flankr=0&map=fmap&option=)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210715)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_MUTANT_STRAINS)
+                                     (display_name
+                                      . S. cerevisiae Whole Genome Collection (PlasmID Repository))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . PlasmID Database)
+                                                   (link . NULL) (id . 97)
+                                                   (format_name
+                                                    . PlasmID_Database))))
+                                     (link
+                                      . http://plasmid.med.harvard.edu/PLASMID/RefseqSearchContinue.do?cdna=true&shrna=true&genomicfragment=true&tfbindsite=true&genome=true&pagesize=50&species=Saccharomyces%20cerevisiae&refseqType=cDNA&searchType=SGD%20Number&searchString=YKL132C)
+                                     (created_by . MARIA)
+                                     (date_created . 2009-01-09)
+                                     (id . 1450288)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_PHENOTYPE_RESOURCES)
+                                     (display_name . SCMD)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SCMD)
+                                                   (link . NULL) (id . 56)
+                                                   (format_name . SCMD))))
+                                     (link
+                                      . http://scmd.gi.k.u-tokyo.ac.jp/datamine/ViewPhoto.do?orf=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210724)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PROTEIN_PROTEIN_DATABASES)
+                                     (display_name . SCOP Superfamily)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . MRC)
+                                                   (link . NULL) (id . 40)
+                                                   (format_name . MRC))))
+                                     (link
+                                      . http://supfam.org/SUPERFAMILY/cgi-bin/gene.cgi?genome=sc&seqid=S000001615)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1209524)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_EXPRESSION)
+                                     (display_name . SPELL)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SPELL)
+                                                   (link . NULL) (id . 89)
+                                                   (format_name . SPELL))))
+                                     (link
+                                      . http://spell.yeastgenome.org/search/show_results?search_string=YKL132C)
+                                     (created_by . OTTO)
+                                     (date_created . 2014-07-23)
+                                     (id . 1738145)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_PHENOTYPE_RESOURCES)
+                                     (display_name . ScreenTroll)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . ScreenTroll)
+                                                   (link . NULL) (id . 12)
+                                                   (format_name
+                                                    . ScreenTroll))))
+                                     (link
+                                      . http://www.rothsteinlab.com/tools/screenTroll)
+                                     (created_by . MARIA)
+                                     (date_created . 2012-01-26)
+                                     (id . 1091088)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_LSP)
+                                     (display_name . Search all NCBI (Entrez))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi?&term=%28YKL132C%5bTEXT%3anoexp%5d%20AND%20cerevisiae%5bALL%5d%29)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-12-15)
+                                     (id . 1859270)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_S288C)
+                                     (display_name . Six-Frame Translation)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/getSeq?seq=YKL132C&flankl=0&flankr=0&map=rmap)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1461678)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_OTHER_STRAINS)
+                                     (display_name . Strain Alignment)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/FUNGI/alignment.pl?locus=YKL132C)
+                                     (created_by . RAMA)
+                                     (date_created . 2012-01-09)
+                                     (id . 1208695)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_OTHER_SPECIES)
+                                     (display_name . Synteny Viewer)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/FUNGI/FungiMap?locus=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210727)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_MUTANT_STRAINS)
+                                     (display_name . Thermo Scientific)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . Thermo Scientific)
+                                                   (link . NULL) (id . 39)
+                                                   (format_name
+                                                    . Thermo_Scientific))))
+                                     (link
+                                      . http://www.thermoscientificbio.com/biology-overview/?term=YKL132C&category=Non%20Mammalian)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210726)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_LSP)
+                                     (display_name . UniProtKB)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . EBI)
+                                                   (link . NULL) (id . 76)
+                                                   (format_name . EBI))))
+                                     (link
+                                      . http://www.uniprot.org/uniprot/P36001)
+                                     (created_by . KARA)
+                                     (date_created . 2000-07-20)
+                                     (id . 1908558)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_SEQUENCE_OTHER_STRAINS)
+                                     (display_name . Variant Viewer)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link . /variant-viewer#/S000001615)
+                                     (created_by . STACIA)
+                                     (date_created . 2015-04-28)
+                                     (id . 2005142)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_REGULATION)
+                                     (display_name . YEASTRACT)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . YEASTRACT)
+                                                   (link . NULL) (id . 104)
+                                                   (format_name . YEASTRACT))))
+                                     (link
+                                      . http://www.yeastract.com/view.php?existing=locus&orfname=YKL132C)
+                                     (created_by . MARIA)
+                                     (date_created . 2013-04-30)
+                                     (id . 1849541)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_HOMOLOGS)
+                                     (display_name . YGOB
+)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . YGOB)
+                                                   (link . NULL) (id . 75)
+                                                   (format_name . YGOB))))
+                                     (link
+                                      . http://ygob.ucd.ie/cgi/ygob.pl?gene=YKL132C)
+                                     (created_by . FISK)
+                                     (date_created . 2005-12-05)
+                                     (id . 1210501)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_EXPRESSION)
+                                     (display_name . YMGV)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . Yeast Microarray Global Viewer)
+                                                   (link . NULL) (id . 38)
+                                                   (format_name
+                                                    . Yeast_Microarray_Global_Viewer))))
+                                     (link
+                                      . http://transcriptome.ens.fr/ymgv/incoming.php?query=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1840072)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROTEIN_HOMOLOGS)
+                                     (display_name . YOGY)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . YOGY)
+                                                   (link . NULL) (id . 79)
+                                                   (format_name . YOGY))))
+                                     (link
+                                      . http://www.bahlerlab.info/cgi-bin/YOGY/yogy-search.pl?gene=YKL132C&species=S._cerevisiae&wild=No&go_term=Yes&go_final=No)
+                                     (created_by . RAMA)
+                                     (date_created . 2006-04-12)
+                                     (id . 1096060)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROEIN_LOCALIZATION)
+                                     (display_name . YPL+)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . YPLplus)
+                                                   (link . NULL) (id . 11)
+                                                   (format_name . YPLplus))))
+                                     (link
+                                      . http://yplp.uni-graz.at/array_data.php?tbl_id=669523384469120242866&showgallery=yes&showinfos=&newsite=yes&gene=YKL132C)
+                                     (created_by . FISK)
+                                     (date_created . 2011-12-01)
+                                     (id . 1158587)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_PHENOTYPE_RESOURCES)
+                                     (display_name . Yeast Fitness Database)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . FitDB)
+                                                   (link . NULL) (id . 96)
+                                                   (format_name . FitDB))))
+                                     (link
+                                      . http://chemogenomics.med.utoronto.ca/fitdb/fitdb.cgi?query=YKL132C)
+                                     (created_by . MARIA)
+                                     (date_created . 2012-12-07)
+                                     (id . 1372335)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PHENOTYPE_MUTANT_STRAINS)
+                                     (display_name
+                                      . Yeast Genetic Resource Center (Japan))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . Yeast Genetic Resource Center)
+                                                   (link . NULL) (id . 87)
+                                                   (format_name
+                                                    . Yeast_Genetic_Resource_Center))))
+                                     (link
+                                      . http://yeast.lab.nig.ac.jp/cgi-bin/nig/search.cgi?eng=1&data=ksyu&systematicname=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2007-07-13)
+                                     (id . 1371988)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PHENOTYPE_ONTOLOGY)
+                                     (display_name . Yeast Phenotype Ontology)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link . /ontology/phenotype/ypo/overview)
+                                     (created_by . OTTO)
+                                     (date_created . 2014-07-23)
+                                     (id . 1738151)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LOCUS_PROEIN_LOCALIZATION)
+                                     (display_name . YeastGFP)
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . YeastGFP)
+                                                   (link . NULL) (id . 35)
+                                                   (format_name . YeastGFP))))
+                                     (link
+                                      . http://yeastgfp.yeastgenome.org/getOrf.php?orf=YKL132C)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-30)
+                                     (id . 1210722)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category
+                                      . LOCUS_PROTEIN_PROTEIN_DATABASES)
+                                     (display_name
+                                      . YeastRC Structure Prediction (Seattle))
+                                     (class_type . BIOENTITY)
+                                     (bioentity_id . 2381) (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . YeastRC)
+                                                   (link . NULL) (id . 33)
+                                                   (format_name . YeastRC))))
+                                     (link
+                                      . http://www.yeastrc.org/pdr/yeastProteinRedirect.do?acc=YKL132C#pspData)
+                                     (created_by . EURIE)
+                                     (date_created . 2007-06-20)
+                                     (id . 1365486))))
+                         (uniprotid . P36001)
+                         (references
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . Entian KD, et al. (1999))
+                                     (pubmed_id . 10628851)
+                                     (journal . Mol Gen Genet)
+                                     (citation
+                                      . Entian KD, et al. (1999) Functional analysis of 150 deletion mutants in Saccharomyces cerevisiae by a systematic approach. Mol Gen Genet 262(4-5):683-702)
+                                     (format_name . 10628851)
+                                     (link . /reference/S000056413/overview)
+                                     (urls
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((category . PUBMED)
+                                                 (display_name . PubMed)
+                                                 (class_type . REFERENCE)
+                                                 (format_name . 17606)
+                                                 (source
+                                                  . #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . PubMed)
+                                                               (link . NULL)
+                                                               (id . 123)
+                                                               (format_name
+                                                                . PubMed))))
+                                                 (link
+                                                  . http://www.ncbi.nlm.nih.gov/pubmed/10628851)
+                                                 (created_by . OTTO)
+                                                 (date_created . 2014-06-03)
+                                                 (id . 923264)
+                                                 (reference_id . 17606)))
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((category . FULLTEXT)
+                                                 (display_name . Full-Text)
+                                                 (class_type . REFERENCE)
+                                                 (format_name . 17606)
+                                                 (source
+                                                  . #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . DOI)
+                                                               (link . NULL)
+                                                               (id . 121)
+                                                               (format_name
+                                                                . DOI))))
+                                                 (link
+                                                  . http://dx.doi.org/10.1007/PL00013817)
+                                                 (created_by . OTTO)
+                                                 (date_created . 2014-06-03)
+                                                 (id . 923265)
+                                                 (reference_id . 17606))))
+                                     (year . 1999) (id . 17606)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . Reinders J, et al. (2006))
+                                     (pubmed_id . 16823961)
+                                     (journal . J Proteome Res)
+                                     (citation
+                                      . Reinders J, et al. (2006) Toward the complete yeast mitochondrial proteome: multidimensional separation techniques for mitochondrial proteomics. J Proteome Res 5(7):1543-54)
+                                     (format_name . 16823961)
+                                     (link . /reference/S000117178/overview)
+                                     (urls
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((category . PUBMED)
+                                                 (display_name . PubMed)
+                                                 (class_type . REFERENCE)
+                                                 (format_name . 54477)
+                                                 (source
+                                                  . #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . PubMed)
+                                                               (link . NULL)
+                                                               (id . 123)
+                                                               (format_name
+                                                                . PubMed))))
+                                                 (link
+                                                  . http://www.ncbi.nlm.nih.gov/pubmed/16823961)
+                                                 (created_by . OTTO)
+                                                 (date_created . 2014-06-03)
+                                                 (id . 863001)
+                                                 (reference_id . 54477)))
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((category . FULLTEXT)
+                                                 (display_name . Full-Text)
+                                                 (class_type . REFERENCE)
+                                                 (format_name . 54477)
+                                                 (source
+                                                  . #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . DOI)
+                                                               (link . NULL)
+                                                               (id . 121)
+                                                               (format_name
+                                                                . DOI))))
+                                                 (link
+                                                  . http://dx.doi.org/10.1021/pr050477f)
+                                                 (created_by . OTTO)
+                                                 (date_created . 2014-06-03)
+                                                 (id . 863002)
+                                                 (reference_id . 54477))))
+                                     (year . 2006) (id . 54477)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name
+                                      . Byrne KP and Wolfe KH (2005))
+                                     (pubmed_id . 16169922)
+                                     (journal . Genome Res)
+                                     (citation
+                                      . Byrne KP and Wolfe KH (2005) The Yeast Gene Order Browser: combining curated homology and syntenic context reveals gene fate in polyploid species. Genome Res 15(10):1456-61)
+                                     (format_name . 16169922)
+                                     (link . /reference/S000113653/overview)
+                                     (urls
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((category . PUBMED)
+                                                 (display_name . PubMed)
+                                                 (class_type . REFERENCE)
+                                                 (format_name . 50997)
+                                                 (source
+                                                  . #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . PubMed)
+                                                               (link . NULL)
+                                                               (id . 123)
+                                                               (format_name
+                                                                . PubMed))))
+                                                 (link
+                                                  . http://www.ncbi.nlm.nih.gov/pubmed/16169922)
+                                                 (created_by . OTTO)
+                                                 (date_created . 2014-06-03)
+                                                 (id . 870229)
+                                                 (reference_id . 50997)))
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((category . FULLTEXT)
+                                                 (display_name . Full-Text)
+                                                 (class_type . REFERENCE)
+                                                 (format_name . 50997)
+                                                 (source
+                                                  . #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . DOI)
+                                                               (link . NULL)
+                                                               (id . 121)
+                                                               (format_name
+                                                                . DOI))))
+                                                 (link
+                                                  . http://dx.doi.org/10.1101/gr.3672305)
+                                                 (created_by . OTTO)
+                                                 (date_created . 2014-06-03)
+                                                 (id . 870230)
+                                                 (reference_id . 50997)))
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((category . PUBMEDCENTRAL)
+                                                 (display_name . PMC)
+                                                 (class_type . REFERENCE)
+                                                 (format_name . 50997)
+                                                 (source
+                                                  . #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . PubMedCentral)
+                                                               (link . NULL)
+                                                               (id . 122)
+                                                               (format_name
+                                                                . PubMedCentral))))
+                                                 (link
+                                                  . http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1240090)
+                                                 (created_by . OTTO)
+                                                 (date_created . 2014-06-03)
+                                                 (id . 870231)
+                                                 (reference_id . 50997))))
+                                     (year . 2005) (id . 50997)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . Cherest H, et al. (2000))
+                                     (pubmed_id . 10799479)
+                                     (journal . J Biol Chem)
+                                     (citation
+                                      . Cherest H, et al. (2000) Polyglutamylation of folate coenzymes is necessary for methionine biosynthesis and maintenance of intact mitochondrial genome in Saccharomyces cerevisiae. J Biol Chem 275(19):14056-63)
+                                     (format_name . 10799479)
+                                     (link . /reference/S000055367/overview)
+                                     (urls
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((category . PUBMED)
+                                                 (display_name . PubMed)
+                                                 (class_type . REFERENCE)
+                                                 (format_name . 16525)
+                                                 (source
+                                                  . #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . PubMed)
+                                                               (link . NULL)
+                                                               (id . 123)
+                                                               (format_name
+                                                                . PubMed))))
+                                                 (link
+                                                  . http://www.ncbi.nlm.nih.gov/pubmed/10799479)
+                                                 (created_by . OTTO)
+                                                 (date_created . 2014-06-03)
+                                                 (id . 924915)
+                                                 (reference_id . 16525)))
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((category . FULLTEXT)
+                                                 (display_name . Full-Text)
+                                                 (class_type . REFERENCE)
+                                                 (format_name . 16525)
+                                                 (source
+                                                  . #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . DOI)
+                                                               (link . NULL)
+                                                               (id . 121)
+                                                               (format_name
+                                                                . DOI))))
+                                                 (link
+                                                  . http://dx.doi.org/10.1074/jbc.275.19.14056)
+                                                 (created_by . OTTO)
+                                                 (date_created . 2014-06-03)
+                                                 (id . 924916)
+                                                 (reference_id . 16525))))
+                                     (year . 2000) (id . 16525))))
+                         (literature_overview
+                          . #S(ST-JSON:JSO
+                               :ALIST ((total_count . 19) (primary_count . 2)
+                                       (review_count . 0)
+                                       (additional_count . 5))))
+                         (name_description . Reduced Mating A) (id . 2381)
+                         (aliases
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . RefSeq protein version ID)
+                                     (display_name . NP_012790.1)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov:80/entrez/viewer.fcgi?val=NP_012790.1)
+                                     (created_by . EURIE)
+                                     (date_created . 2004-08-31) (references)
+                                     (protein . TRUE) (id . 82439)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . PomBase ID)
+                                     (display_name . SPAC227.09)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . PomBase)
+                                                   (link . NULL) (id . 24)
+                                                   (format_name . PomBase))))
+                                     (link
+                                      . http://www.pombase.org/spombe/result/SPAC227.09)
+                                     (created_by . RAMA)
+                                     (date_created . 2013-12-19) (references)
+                                     (protein . FALSE) (id . 72070)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . Protein version ID)
+                                     (display_name . CAA81972.1)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . GenBank/EMBL/DDBJ)
+                                                   (link . NULL) (id . 77)
+                                                   (format_name
+                                                    . GenBank-EMBL-DDBJ))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/protein/CAA81972.1)
+                                     (created_by . OTTO)
+                                     (date_created . 2012-12-18) (references)
+                                     (protein . TRUE) (id . 74568)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . DNA accession ID)
+                                     (display_name . Z28131)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . GenBank/EMBL/DDBJ)
+                                                   (link . NULL) (id . 77)
+                                                   (format_name
+                                                    . GenBank-EMBL-DDBJ))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/nucleotide/Z28131)
+                                     (created_by . OTTO)
+                                     (date_created . 2012-05-03) (references)
+                                     (protein . FALSE) (id . 137222)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . NCBI protein GI)
+                                     (display_name . 544343)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/protein/544343)
+                                     (created_by . OTTO)
+                                     (date_created . 2012-05-03) (references)
+                                     (protein . TRUE) (id . 158428)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . UniParc ID)
+                                     (display_name . UPI000012AB4F)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . EBI)
+                                                   (link . NULL) (id . 76)
+                                                   (format_name . EBI))))
+                                     (link
+                                      . http://www.uniprot.org/uniparc/UPI000012AB4F)
+                                     (created_by . OTTO)
+                                     (date_created . 2013-12-03) (references)
+                                     (protein . TRUE) (id . 142245)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . NCBI protein GI)
+                                     (display_name . 6322718)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/protein/6322718)
+                                     (created_by . OTTO)
+                                     (date_created . 2007-08-29) (references)
+                                     (protein . TRUE) (id . 109412)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . Gene ID)
+                                     (display_name . 34004)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . BioGRID)
+                                                   (link . NULL) (id . 36)
+                                                   (format_name . BioGRID))))
+                                     (link . NULL) (created_by . EURIE)
+                                     (date_created . 2006-04-07) (references)
+                                     (protein . FALSE) (id . 114116)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . TPA protein version ID)
+                                     (display_name . DAA09030.1)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name
+                                                    . GenBank/EMBL/DDBJ)
+                                                   (link . NULL) (id . 77)
+                                                   (format_name
+                                                    . GenBank-EMBL-DDBJ))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/protein/DAA09030.1)
+                                     (created_by . OTTO)
+                                     (date_created . 2013-01-16) (references)
+                                     (protein . TRUE) (id . 195138)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . RefSeq nucleotide version ID)
+                                     (display_name . NM_001179698.1)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/nucleotide/NM_001179698.1)
+                                     (created_by . OTTO)
+                                     (date_created . 2013-06-07) (references)
+                                     (protein . TRUE) (id . 200987)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . Gene ID)
+                                     (display_name . 853727)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/gene/853727)
+                                     (created_by . OTTO)
+                                     (date_created . 2013-12-05) (references)
+                                     (protein . FALSE) (id . 188454)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . LoQate ID)
+                                     (display_name . 3764)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . LoQate)
+                                                   (link . NULL) (id . 108)
+                                                   (format_name . LoQate))))
+                                     (link
+                                      . http://www.weizmann.ac.il/molgen/loqate/gene/view/3764)
+                                     (created_by . RAMA)
+                                     (date_created . 2013-07-09) (references)
+                                     (protein . FALSE) (id . 178389)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . NCBI protein GI)
+                                     (display_name . 486223)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . NCBI)
+                                                   (link . NULL) (id . 29)
+                                                   (format_name . NCBI))))
+                                     (link
+                                      . http://www.ncbi.nlm.nih.gov/protein/486223)
+                                     (created_by . OTTO)
+                                     (date_created . 2012-12-11) (references)
+                                     (protein . TRUE) (id . 167643)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . DBID Primary)
+                                     (display_name . S000001615)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link
+                                      . /cgi-bin/getGenBank.pl?locus=S000001615)
+                                     (created_by . OTTO)
+                                     (date_created . 2004-08-30) (references)
+                                     (protein . FALSE) (id . 17062)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . EC number)
+                                     (display_name . 6.3.2.17)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . IUBMB)
+                                                   (link . NULL) (id . 31)
+                                                   (format_name . IUBMB))))
+                                     (link
+                                      . http://www.expasy.org/enzyme/6.3.2.17)
+                                     (created_by . KARA)
+                                     (date_created . 2000-07-20)
+                                     (references
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((display_name . SGD (2009))
+                                                 (format_name . S000129855)
+                                                 (link
+                                                  . /reference/S000129855/overview)
+                                                 (pubmed_id . NULL)
+                                                 (year . 2009) (id . 66776))))
+                                     (protein . TRUE) (id . 23628)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . NCBI protein name)
+                                     (display_name
+                                      . putative tetrahydrofolate synthase)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 0) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (link . NULL) (created_by . STACIA)
+                                     (date_created . 2012-11-16) (references)
+                                     (protein . FALSE) (id . 4908)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . Gene ID)
+                                     (display_name . YKL132c)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . EUROSCARF)
+                                                   (link . NULL) (id . 34)
+                                                   (format_name . EUROSCARF))))
+                                     (link
+                                      . http://web.uni-frankfurt.de/fb15/mikro/euroscarf/data/YKL132c.html)
+                                     (created_by . CHANDRA)
+                                     (date_created . 2003-08-05) (references)
+                                     (protein . FALSE) (id . 33194)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . UniProt/Swiss-Prot ID)
+                                     (display_name . P36001)
+                                     (class_type . BIOENTITY)
+                                     (is_external_id . 1) (bioentity_id . 2381)
+                                     (format_name . 2381)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . EBI)
+                                                   (link . NULL) (id . 76)
+                                                   (format_name . EBI))))
+                                     (link
+                                      . http://www.uniprot.org/uniprot/P36001)
+                                     (created_by . OTTO)
+                                     (date_created . 2001-11-07) (references)
+                                     (protein . TRUE) (id . 42211))))
+                         (display_name . RMA1)
+                         (headline . Putative dihydrofolate synthetase)
+                         (description
+                          . Putative dihydrofolate synthetase; similar to E. coli folylpolyglutamate synthetase/dihydrofolate synthetase; the authentic, non-tagged protein is detected in highly purified mitochondria in high-throughput studies; RMA1 has a paralog, FOL3, that arose from the whole genome duplication)
+                         (created_by . OTTO)
+                         (phenotype_overview
+                          . #S(ST-JSON:JSO
+                               :ALIST ((large_scale_phenotypes
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((null
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . resistance to amitrole: decreased)
+                                                                 (link
+                                                                  . /phenotype/decreased_resistance_to_amitrole/overview)
+                                                                 (id . 1770)
+                                                                 (format_name
+                                                                  . decreased_resistance_to_amitrole)))
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . resistance to acrolein: decreased)
+                                                                 (link
+                                                                  . /phenotype/decreased_resistance_to_acrolein/overview)
+                                                                 (id . 2448)
+                                                                 (format_name
+                                                                  . decreased_resistance_to_acrolein)))
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . competitive fitness: increased)
+                                                                 (link
+                                                                  . /phenotype/increased_competitive_fitness/overview)
+                                                                 (id . 1554)
+                                                                 (format_name
+                                                                  . increased_competitive_fitness)))
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . utilization of nitrogen source: decreased rate)
+                                                                 (link
+                                                                  . /phenotype/decreased_rate_utilization_of_nitrogen_source/overview)
+                                                                 (id . 44979)
+                                                                 (format_name
+                                                                  . decreased_rate_utilization_of_nitrogen_source)))
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . resistance to cycloheximide: decreased)
+                                                                 (link
+                                                                  . /phenotype/decreased_resistance_to_cycloheximide/overview)
+                                                                 (id . 1751)
+                                                                 (format_name
+                                                                  . decreased_resistance_to_cycloheximide)))
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . viable)
+                                                                 (link
+                                                                  . /phenotype/viable/overview)
+                                                                 (id . 1210)
+                                                                 (format_name
+                                                                  . viable))))
+                                                     (overexpression
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . invasive growth: increased)
+                                                                 (link
+                                                                  . /phenotype/increased_invasive_growth/overview)
+                                                                 (id . 1469)
+                                                                 (format_name
+                                                                  . increased_invasive_growth)))
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . filamentous growth: increased)
+                                                                 (link
+                                                                  . /phenotype/increased_filamentous_growth/overview)
+                                                                 (id . 1127)
+                                                                 (format_name
+                                                                  . increased_filamentous_growth)))))))
+                                       (strains (Strain Annotations) (S288C 6)
+                                        (Sigma1278b 2))
+                                       (paragraph . NULL)
+                                       (experiment_categories
+                                        (Mutant Type classical genetics
+                                         large-scale survey)
+                                        (null 0 6) (overexpression 0 2))
+                                       (classical_phenotypes
+                                        . #S(ST-JSON:JSO :ALIST NIL)))))
+                         (source
+                          . #S(ST-JSON:JSO
+                               :ALIST ((display_name . SGD) (link . NULL)
+                                       (id . 5) (format_name . SGD))))
+                         (sgdid . S000001615)
+                         (reference_mapping
+                          . #S(ST-JSON:JSO
+                               :ALIST ((17606 . 1) (54477 . 2) (16525 . 4)
+                                       (50997 . 3))))
+                         (interaction_overview
+                          . #S(ST-JSON:JSO
+                               :ALIST ((phys_circle_size . 0.97720504)
+                                       (num_both_interactors . 0)
+                                       (circle_distance . 6.419638)
+                                       (physical_experiments
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((Affinity Capture-RNA . 1)
+                                                     (Two-hybrid . 1)
+                                                     (Affinity Capture-MS
+                                                      . 1))))
+                                       (total_interactors . 65)
+                                       (genetic_experiments
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((Positive Genetic . 15)
+                                                     (Synthetic Growth Defect
+                                                      . 1)
+                                                     (Negative Genetic . 56))))
+                                       (total_interactions . 75)
+                                       (num_phys_interactors . 3)
+                                       (num_gen_interactors . 62)
+                                       (gen_circle_size . 4.4424334))))
+                         (ecnumbers
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . 6.3.2.17)
+                                     (link . /ecnumber/6.3.2.17/overview)
+                                     (id . 42537) (format_name . 6.3.2.17))))
+                         (locus_type . ORF) (qualifier . Verified)
+                         (paralogs
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . 2381 - 1474)
+                                     (class_type . BIOENTITY)
+                                     (parent
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . RMA1)
+                                                   (link
+                                                    . /locus/S000001615/overview)
+                                                   (id . 2381)
+                                                   (format_name . YKL132C))))
+                                     (parent_id . 2381)
+                                     (format_name . 2381 - 1474)
+                                     (relation_type . paralog)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (references
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((display_name
+                                                  . Byrne KP and Wolfe KH (2005))
+                                                 (format_name . 16169922)
+                                                 (link
+                                                  . /reference/S000113653/overview)
+                                                 (pubmed_id . 16169922)
+                                                 (year . 2005) (id . 50997))))
+                                     (created_by . OTTO)
+                                     (child
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . FOL3)
+                                                   (link
+                                                    . /locus/S000004719/overview)
+                                                   (id . 1474)
+                                                   (format_name . YMR113W))))
+                                     (date_created . 2014-10-06)
+                                     (child_id . 1474) (id . 172188))))
+                         (go_overview
+                          . #S(ST-JSON:JSO
+                               :ALIST ((computational_annotation_count . 13)
+                                       (htp_cellular_component_terms
+                                        #S(ST-JSON:JSO
+                                           :ALIST ((term
+                                                    . #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . mitochondrion)
+                                                                 (link
+                                                                  . /go/GO:0005739/overview)
+                                                                 (id . 4434)
+                                                                 (format_name
+                                                                  . GO:0005739))))
+                                                   (qualifiers part of)
+                                                   (evidence_codes
+                                                    #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . IDA)
+                                                               (link
+                                                                . http://www.geneontology.org/page/ida-inferred-direct-assay)
+                                                               (id . 449)
+                                                               (format_name
+                                                                . IDA)))))))
+                                       (manual_molecular_function_terms
+                                        #S(ST-JSON:JSO
+                                           :ALIST ((term
+                                                    . #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . tetrahydrofolylpolyglutamate synthase activity)
+                                                                 (link
+                                                                  . /go/GO:0004326/overview)
+                                                                 (id . 5304)
+                                                                 (format_name
+                                                                  . GO:0004326))))
+                                                   (qualifiers enables)
+                                                   (evidence_codes
+                                                    #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . ISS)
+                                                               (link
+                                                                . http://www.geneontology.org/page/iss-inferred-sequence-or-structural-similarity)
+                                                               (id . 454)
+                                                               (format_name
+                                                                . ISS)))))))
+                                       (go_slim)
+                                       (manual_biological_process_terms
+                                        #S(ST-JSON:JSO
+                                           :ALIST ((term
+                                                    . #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . biological process)
+                                                                 (link
+                                                                  . /ontology/go/biological_process/overview)
+                                                                 (id . 6893)
+                                                                 (format_name
+                                                                  . biological_process))))
+                                                   (qualifiers involved in)
+                                                   (evidence_codes
+                                                    #S(ST-JSON:JSO
+                                                       :ALIST ((display_name
+                                                                . ND)
+                                                               (link
+                                                                . http://www.geneontology.org/page/nd-no-biological-data-available)
+                                                               (id . 467)
+                                                               (format_name
+                                                                . ND)))))))
+                                       (paragraph . NULL)
+                                       (manual_cellular_component_terms)
+                                       (htp_molecular_function_terms)
+                                       (date_last_reviewed . 2004-08-13)
+                                       (htp_biological_process_terms))))
+                         (date_created . 2000-05-19)
+                         (link . /locus/S000001615/overview) (pathways)
+                         (sequence_overview
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . AWRI1631)
+                                     (link . /strain/AWRI1631/overview)
+                                     (id . 17) (format_name . AWRI1631)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . AWRI796)
+                                     (link . /strain/AWRI796/overview)
+                                     (id . 18) (format_name . AWRI796)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . BC187)
+                                     (link . /strain/BC187/overview) (id . 19)
+                                     (format_name . BC187)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . BY4741)
+                                     (link . /strain/BY4741/overview) (id . 20)
+                                     (format_name . BY4741)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . BY4742)
+                                     (link . /strain/BY4742/overview) (id . 21)
+                                     (format_name . BY4742)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . CBS7960)
+                                     (link . /strain/CBS7960/overview)
+                                     (id . 23) (format_name . CBS7960)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . CEN.PK)
+                                     (link . /strain/CENPK/overview) (id . 4)
+                                     (format_name . CENPK)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . CLIB215)
+                                     (link . /strain/CLIB215/overview)
+                                     (id . 24) (format_name . CLIB215)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . CLIB324)
+                                     (link . /strain/CLIB324/overview)
+                                     (id . 25) (format_name . CLIB324)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . CLIB382)
+                                     (link . /strain/CLIB382/overview)
+                                     (id . 26) (format_name . CLIB382)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . D273-10B)
+                                     (link . /strain/D273-10B/overview)
+                                     (id . 7) (format_name . D273-10B)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . DBVPG6044)
+                                     (link . /strain/DBVPG6044/overview)
+                                     (id . 28) (format_name . DBVPG6044)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . EC1118)
+                                     (link . /strain/EC1118/overview) (id . 33)
+                                     (format_name . EC1118)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . EC9-8)
+                                     (link . /strain/EC9-8/overview) (id . 34)
+                                     (format_name . EC9-8)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . FL100)
+                                     (link . /strain/FL100/overview) (id . 3)
+                                     (format_name . FL100)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . FY1679)
+                                     (link . /strain/FY1679/overview) (id . 38)
+                                     (format_name . FY1679)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . FostersB)
+                                     (link . /strain/FostersB/overview)
+                                     (id . 35) (format_name . FostersB)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . FostersO)
+                                     (link . /strain/FostersO/overview)
+                                     (id . 36) (format_name . FostersO)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . JAY291)
+                                     (link . /strain/JAY291/overview) (id . 39)
+                                     (format_name . JAY291)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . JK9-3d)
+                                     (link . /strain/JK9-3d/overview) (id . 11)
+                                     (format_name . JK9-3d)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . K11)
+                                     (link . /strain/K11/overview) (id . 41)
+                                     (format_name . K11)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . Kyokai7)
+                                     (link . /strain/Kyokai7/overview)
+                                     (id . 42) (format_name . Kyokai7)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . L1528)
+                                     (link . /strain/L1528/overview) (id . 43)
+                                     (format_name . L1528)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . LalvinQA23)
+                                     (link . /strain/LalvinQA23/overview)
+                                     (id . 44) (format_name . LalvinQA23)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . M22)
+                                     (link . /strain/M22/overview) (id . 45)
+                                     (format_name . M22)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . PW5)
+                                     (link . /strain/PW5/overview) (id . 46)
+                                     (format_name . PW5)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . RM11-1a)
+                                     (link . /strain/RM11-1a/overview)
+                                     (id . 13) (format_name . RM11-1a)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . RedStar)
+                                     (link . /strain/RedStar/overview)
+                                     (id . 47) (format_name . RedStar)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . S288C)
+                                     (link . /strain/S288C/overview) (id . 1)
+                                     (format_name . S288C)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . SEY6210)
+                                     (link . /strain/SEY6210/overview)
+                                     (id . 12) (format_name . SEY6210)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . SK1)
+                                     (link . /strain/SK1/overview) (id . 6)
+                                     (format_name . SK1)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . Sigma1278b)
+                                     (link . /strain/Sigma1278b/overview)
+                                     (id . 5) (format_name . Sigma1278b)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . T7)
+                                     (link . /strain/T7/overview) (id . 51)
+                                     (format_name . T7)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . T73)
+                                     (link . /strain/T73/overview) (id . 52)
+                                     (format_name . T73)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . UC5)
+                                     (link . /strain/UC5/overview) (id . 53)
+                                     (format_name . UC5)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . UWOPSS)
+                                     (link . /strain/UWOPSS/overview) (id . 54)
+                                     (format_name . UWOPSS)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . VIN13)
+                                     (link . /strain/VIN13/overview) (id . 55)
+                                     (format_name . VIN13)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . VL3)
+                                     (link . /strain/VL3/overview) (id . 56)
+                                     (format_name . VL3)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . W303)
+                                     (link . /strain/W303/overview) (id . 2)
+                                     (format_name . W303)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . X2180-1A)
+                                     (link . /strain/X2180-1A/overview)
+                                     (id . 8) (format_name . X2180-1A)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . Y10)
+                                     (link . /strain/Y10/overview) (id . 62)
+                                     (format_name . Y10)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . Y55)
+                                     (link . /strain/Y55/overview) (id . 9)
+                                     (format_name . Y55)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . YJM269)
+                                     (link . /strain/YJM269/overview) (id . 63)
+                                     (format_name . YJM269)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . YJM339)
+                                     (link . /strain/YJM339/overview) (id . 64)
+                                     (format_name . YJM339)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . YJM789)
+                                     (link . /strain/YJM789/overview) (id . 65)
+                                     (format_name . YJM789)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . YPH499)
+                                     (link . /strain/YPH499/overview) (id . 67)
+                                     (format_name . YPH499)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . YPS128)
+                                     (link . /strain/YPS128/overview) (id . 70)
+                                     (format_name . YPS128)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . YPS163)
+                                     (link . /strain/YPS163/overview) (id . 71)
+                                     (format_name . YPS163)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . YS9)
+                                     (link . /strain/YS9/overview) (id . 72)
+                                     (format_name . YS9)))
+                          #S(ST-JSON:JSO
+                             :ALIST ((display_name . ZTW1)
+                                     (link . /strain/ZTW1/overview) (id . 73)
+                                     (format_name . ZTW1))))
+                         (bioent_status . Active) (genetic_position . NULL)
+                         (class_type . LOCUS)
+                         (regulation_overview
+                          . #S(ST-JSON:JSO
+                               :ALIST ((paragraph . NULL) (regulator_count . 4)
+                                       (target_count . 0))))
+                         (format_name . YKL132C) (paragraph . NULL)
+                         (qualities
+                          . #S(ST-JSON:JSO
+                               :ALIST ((feature_type
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((display_name
+                                                      . Feature Type)
+                                                     (class_type . BIOENTITY)
+                                                     (bioentity
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . RMA1)
+                                                                   (link
+                                                                    . /locus/S000001615/overview)
+                                                                   (id . 2381)
+                                                                   (format_name
+                                                                    . YKL132C))))
+                                                     (format_name . 2381)
+                                                     (value . ORF)
+                                                     (source
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . SGD)
+                                                                   (link
+                                                                    . NULL)
+                                                                   (id . 5)
+                                                                   (format_name
+                                                                    . SGD))))
+                                                     (link . NULL)
+                                                     (created_by . OTTO)
+                                                     (date_created
+                                                      . 2014-10-04)
+                                                     (references)
+                                                     (id . 35762))))
+                                       (headline
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((display_name . Headline)
+                                                     (class_type . BIOENTITY)
+                                                     (bioentity
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . RMA1)
+                                                                   (link
+                                                                    . /locus/S000001615/overview)
+                                                                   (id . 2381)
+                                                                   (format_name
+                                                                    . YKL132C))))
+                                                     (format_name . 2381)
+                                                     (value
+                                                      . Putative dihydrofolate synthetase)
+                                                     (source
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . SGD)
+                                                                   (link
+                                                                    . NULL)
+                                                                   (id . 5)
+                                                                   (format_name
+                                                                    . SGD))))
+                                                     (link . NULL)
+                                                     (created_by . OTTO)
+                                                     (date_created
+                                                      . 2000-05-19)
+                                                     (references)
+                                                     (id . 24369))))
+                                       (qualifier
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((display_name . Qualifier)
+                                                     (class_type . BIOENTITY)
+                                                     (bioentity
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . RMA1)
+                                                                   (link
+                                                                    . /locus/S000001615/overview)
+                                                                   (id . 2381)
+                                                                   (format_name
+                                                                    . YKL132C))))
+                                                     (format_name . 2381)
+                                                     (value . Verified)
+                                                     (source
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . SGD)
+                                                                   (link
+                                                                    . NULL)
+                                                                   (id . 5)
+                                                                   (format_name
+                                                                    . SGD))))
+                                                     (link . NULL)
+                                                     (created_by . OTTO)
+                                                     (date_created
+                                                      . 2000-05-19)
+                                                     (references)
+                                                     (id . 24366))))
+                                       (name_description
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((display_name
+                                                      . Name Description)
+                                                     (class_type . BIOENTITY)
+                                                     (bioentity
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . RMA1)
+                                                                   (link
+                                                                    . /locus/S000001615/overview)
+                                                                   (id . 2381)
+                                                                   (format_name
+                                                                    . YKL132C))))
+                                                     (format_name . 2381)
+                                                     (value . Reduced Mating A)
+                                                     (source
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . SGD)
+                                                                   (link
+                                                                    . NULL)
+                                                                   (id . 5)
+                                                                   (format_name
+                                                                    . SGD))))
+                                                     (link . NULL)
+                                                     (created_by . OTTO)
+                                                     (date_created
+                                                      . 2000-05-19)
+                                                     (references
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . Entian KD, et al. (1999))
+                                                                 (format_name
+                                                                  . 10628851)
+                                                                 (link
+                                                                  . /reference/S000056413/overview)
+                                                                 (pubmed_id
+                                                                  . 10628851)
+                                                                 (year . 1999)
+                                                                 (id
+                                                                  . 17606))))
+                                                     (id . 24367))))
+                                       (id
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((display_name . ID)
+                                                     (class_type . BIOENTITY)
+                                                     (bioentity
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . RMA1)
+                                                                   (link
+                                                                    . /locus/S000001615/overview)
+                                                                   (id . 2381)
+                                                                   (format_name
+                                                                    . YKL132C))))
+                                                     (format_name . 2381)
+                                                     (value . 2381)
+                                                     (source
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . SGD)
+                                                                   (link
+                                                                    . NULL)
+                                                                   (id . 5)
+                                                                   (format_name
+                                                                    . SGD))))
+                                                     (link . NULL)
+                                                     (created_by . OTTO)
+                                                     (date_created
+                                                      . 2014-10-04)
+                                                     (references)
+                                                     (id . 35763))))
+                                       (gene_name
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((display_name . Gene Name)
+                                                     (class_type . BIOENTITY)
+                                                     (bioentity
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . RMA1)
+                                                                   (link
+                                                                    . /locus/S000001615/overview)
+                                                                   (id . 2381)
+                                                                   (format_name
+                                                                    . YKL132C))))
+                                                     (format_name . 2381)
+                                                     (value . RMA1)
+                                                     (source
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . SGD)
+                                                                   (link
+                                                                    . NULL)
+                                                                   (id . 5)
+                                                                   (format_name
+                                                                    . SGD))))
+                                                     (link . NULL)
+                                                     (created_by . OTTO)
+                                                     (date_created
+                                                      . 2014-10-04)
+                                                     (references
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . Entian KD, et al. (1999))
+                                                                 (format_name
+                                                                  . 10628851)
+                                                                 (link
+                                                                  . /reference/S000056413/overview)
+                                                                 (pubmed_id
+                                                                  . 10628851)
+                                                                 (year . 1999)
+                                                                 (id
+                                                                  . 17606))))
+                                                     (id . 35761))))
+                                       (description
+                                        . #S(ST-JSON:JSO
+                                             :ALIST ((display_name
+                                                      . Description)
+                                                     (class_type . BIOENTITY)
+                                                     (bioentity
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . RMA1)
+                                                                   (link
+                                                                    . /locus/S000001615/overview)
+                                                                   (id . 2381)
+                                                                   (format_name
+                                                                    . YKL132C))))
+                                                     (format_name . 2381)
+                                                     (value
+                                                      . Putative dihydrofolate synthetase; similar to E. coli folylpolyglutamate synthetase/dihydrofolate synthetase; the authentic, non-tagged protein is detected in highly purified mitochondria in high-throughput studies; RMA1 has a paralog, FOL3, that arose from the whole genome duplication)
+                                                     (source
+                                                      . #S(ST-JSON:JSO
+                                                           :ALIST ((display_name
+                                                                    . SGD)
+                                                                   (link
+                                                                    . NULL)
+                                                                   (id . 5)
+                                                                   (format_name
+                                                                    . SGD))))
+                                                     (link . NULL)
+                                                     (created_by . OTTO)
+                                                     (date_created
+                                                      . 2000-05-19)
+                                                     (references
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . Reinders J, et al. (2006))
+                                                                 (format_name
+                                                                  . 16823961)
+                                                                 (link
+                                                                  . /reference/S000117178/overview)
+                                                                 (pubmed_id
+                                                                  . 16823961)
+                                                                 (year . 2006)
+                                                                 (id . 54477)))
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . Cherest H, et al. (2000))
+                                                                 (format_name
+                                                                  . 10799479)
+                                                                 (link
+                                                                  . /reference/S000055367/overview)
+                                                                 (pubmed_id
+                                                                  . 10799479)
+                                                                 (year . 2000)
+                                                                 (id . 16525)))
+                                                      #S(ST-JSON:JSO
+                                                         :ALIST ((display_name
+                                                                  . Byrne KP and Wolfe KH (2005))
+                                                                 (format_name
+                                                                  . 16169922)
+                                                                 (link
+                                                                  . /reference/S000113653/overview)
+                                                                 (pubmed_id
+                                                                  . 16169922)
+                                                                 (year . 2005)
+                                                                 (id
+                                                                  . 50997))))
+                                                     (id . 24368)))))))
+                         (protein_overview
+                          . #S(ST-JSON:JSO
+                               :ALIST ((length . 430) (pi . 7.16)
+                                       (molecular_weight . 48143.0))))
+                         (gene_name . RMA1)
+                         (history
+                          #S(ST-JSON:JSO
+                             :ALIST ((category . Nomenclature)
+                                     (history_type . LSP)
+                                     (source
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . SGD)
+                                                   (link . NULL) (id . 5)
+                                                   (format_name . SGD))))
+                                     (created_by . OTTO)
+                                     (locus
+                                      . #S(ST-JSON:JSO
+                                           :ALIST ((display_name . RMA1)
+                                                   (link
+                                                    . /locus/S000001615/overview)
+                                                   (id . 2381)
+                                                   (format_name . YKL132C))))
+                                     (note . <strong>Name:</strong> RMA1)
+                                     (strain . NULL) (experiment . NULL)
+                                     (references
+                                      #S(ST-JSON:JSO
+                                         :ALIST ((display_name
+                                                  . Entian KD, et al. (1999))
+                                                 (format_name . 10628851)
+                                                 (link
+                                                  . /reference/S000056413/overview)
+                                                 (pubmed_id . 10628851)
+                                                 (year . 1999) (id . 17606))))
+                                     (date_created . 1999-01-01)
+                                     (id . 1994247)))))))
+           (tabs
+            . #S(ST-JSON:JSO
+                 :ALIST ((protein_tab . TRUE) (interaction_tab . TRUE)
+                         (summary_tab . TRUE) (wiki_tab . FALSE)
+                         (sequence_section . TRUE) (expression_tab . TRUE)
+                         (phenotype_tab . TRUE) (literature_tab . TRUE)
+                         (go_tab . TRUE) (regulation_tab . TRUE)
+                         (sequence_tab . TRUE) (id . 2381)
+                         (history_tab . FALSE))))))

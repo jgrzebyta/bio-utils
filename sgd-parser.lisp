@@ -43,9 +43,9 @@
 (defun --load-go (json-objects)
   "Load Gene Ontology terms"
   (let ((to-return (make-hash-table :test #'equal)))
-    (loop for term in '("manual_molecular_function_terms" "manual_biological_process_terms" "manual_cellular_component_terms")
-	 for term-nodes = nil
-	 for response-nodes = nil
+    (loop for term in '("molecular_function" "biological_process" "cellular_component")
+	  for term-nodes = nil
+	  for response-nodes = nil
        do (progn
 	    (setq term-nodes (getjso term json-objects))
 	    (setq response-nodes
@@ -57,6 +57,22 @@
     to-return ;; return final result
     )
   )
+
+(defun --load-go2 (jso-go-terms)
+  "Load Gene Ontology terms. Rewritten version of --load-go method"
+  ;; Following return hash table has layout: [ <term> : (( go_id . go_term) ...) ]
+  (let ((to-return (make-hash-table :test #'equal)))
+    (loop for term in '("molecular_function" "biological_process" "cellular_component")
+          for term-value = (gethash term to-return)
+       do (mapjso #'(lambda (k v) (if (search term k)
+				      ()
+				      ))
+		  jso-go-terms)) ;; load return hash-table
+    to-return ;; return final result
+    )
+  
+  )
+
 
 (defun --load-go-atom (go-atom)
   "Load Gene Ontology single atom"
@@ -74,7 +90,7 @@
     (setf (gethash "locus-link" to-return) (getjso "locusLink" json-object))
     (setf (gethash "uniprot-id" to-return) (getjso* "locusData.uniprotid" json-object))
     (setf (gethash "aliases" to-return) (--load-aliases (getjso* "locusData.aliases" json-object)))
-    (setf (gethash "go-terms" to-return) (--load-go (getjso* "locusData.go_overview" json-object)))
+    (setf (gethash "go-terms" to-return) (--load-go2 (getjso* "locusData.go_overview" json-object)))
 	to-return
     )
 )

@@ -17,6 +17,7 @@
   (let* ((record (get-sgd "YPL252C"))
 	 (display-name (gethash "display-name" record))
 	 (uniprot-id (gethash "uniprot-id" record)))
+    (format t "data: ~a ~a ~a ~%" record display-name uniprot-id)
     (assert-true (not (null display-name)))
     (assert-true (not (null uniprot-id)))))
 
@@ -29,10 +30,15 @@
     ))
 
 
-(lisp-unit2:define-test sdb-YKL132C-test
-    ()
-  (let* ((result (get-jso-str "YKL132C")))
-    (format t "data-str: ~%~a~%" result)
+(lisp-unit2:define-test go-YKL132C-test ()
+  "Test GO terms for that ORF"
+  (let* ((result (get-sgd "YKL132C"))
+	 (go-terms (gethash "go-terms" result)))
+    (assert-true (not (null go-terms)))
+    (format t "keys:~%")
+    (loop for k being the hash-keys in go-terms
+       using (hash-value v)
+	 do (format t "key: ~s value: ~a" k v))
     ))
 
 

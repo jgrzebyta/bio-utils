@@ -62,23 +62,29 @@
   "Load Gene Ontology terms. Rewritten version of --load-go method"
   ;; Following return hash table has layout: [ <term> : (( go_id . go_term) ...) ]
   (let ((to-return (make-hash-table :test #'equal)))
-    (loop for term in '("molecular_function" "biological_process" "cellular_component")
-          for term-value = (gethash term to-return)
-       do (mapjso #'(lambda (k v) (if (search term k)
-				      ()
+    (progn
+      (loop for term in '("molecular_function" "biological_process" "cellular_component")
+            for term-value = (gethash term to-return)
+                do (mapjso #'(lambda (k v) (if (search term k) ;; value v i a list of atomic go term
+				      (progn
+					(loop for atomic in v
+					    for atomic-parsed = (--load-go-atom atomic)
+					   append (if (not (null atomic-parsed))(list atomic-parsed) nil) into atomics
+					   finally (setf term-value (append atomics term-value))
+					    ))
 				      ))
-		  jso-go-terms)) ;; load return hash-table
+		  jso-go-terms)
+	 (setf (gethash term to-return) term-value))) ;; load return hash-table
+   ;; (format t "output: ~a ~%" to-return)
     to-return ;; return final result
-    )
-  
-  )
+    ))
 
 
 (defun --load-go-atom (go-atom)
   "Load Gene Ontology single atom"
   (let ((format-name (getjso* "term.format_name" go-atom)))
     (if (search "GO:" format-name)
-	(cons (getjso* "term.display_name" go-atom) format-name)
+	(cons format-name (getjso* "term.display_name" go-atom))
 	nil)))
 
 (defun --get-json-as-hashmap (json-object)

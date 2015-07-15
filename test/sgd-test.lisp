@@ -38,8 +38,20 @@
     (format t "keys:~%")
     (loop for k being the hash-keys in go-terms
        using (hash-value v)
-	 do (format t "key: ~s value: ~a" k v))
+	 do (format t "key: ~s value: ~a~%" k v))
     ))
+
+(lisp-unit2:define-test go-YPL252C-test ()
+  "Test GO terms for that ORF"
+  (let* ((result (get-sgd "YPL252C"))
+	 (go-terms (gethash "go-terms" result)))
+    (assert-true (not (null go-terms)))
+    (format t "keys:~%")
+    (loop for k being the hash-keys in go-terms
+       using (hash-value v)
+	 do (format t "key: ~s value: '~a'~%" k v))
+    ))
+
 
 
 ;; Additional utils functions 

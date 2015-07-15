@@ -94,7 +94,9 @@
   "Return Saccharomyces Genome Database record identified by NAME as a hashmap."
   (let* ((base-url (format nil "http://www.yeastgenome.org/search?query=~a" name))
 	 (page (drakma:http-request base-url))
-	 (json-string (--get-bootstrap-json-as-string page))
+	 (json-string (handler-case
+			  (--get-bootstrap-json-as-string page)
+			(error () (return-from get-sgd nil))))
 	 (json-object (st-json:read-json-from-string json-string)))
     (--get-json-as-hashmap json-object)))
 

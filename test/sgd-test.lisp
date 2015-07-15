@@ -41,9 +41,11 @@
 	 do (format t "key: ~s value: ~a~%" k v))
     ))
 
+
+
 (lisp-unit2:define-test go-YPL252C-test ()
   "Test GO terms for that ORF"
-  (let* ((result (get-sgd "YPL252C"))
+  (let* ((result (get-testing-jso))
 	 (go-terms (gethash "go-terms" result)))
     (assert-true (not (null go-terms)))
     (format t "keys:~%")
@@ -51,6 +53,24 @@
        using (hash-value v)
 	 do (format t "key: ~s value: '~a'~%" k v))
     ))
+
+(lisp-unit2:define-test xref-test ()
+  "Test cross references"
+  (let* ((raw (get-testing-jso))
+	 (xref (gethash "aliases" raw)))
+    (assert-true (> (length xref) 0))
+    (loop for x in xref
+       do (progn
+	    (assert-true (> (hash-table-size x) 0))
+	    (format t "aliases:~%~c ~{~A~^; ~} ~%" #\Tab
+	       (loop for k being the hash-keys in x
+		     using (hash-value v)
+		      append (list (format nil "~s: ~s" k v)) into records
+		      finally (return records)
+		 ))
+	 )
+	 )))
+
 
 
 
@@ -65,3 +85,5 @@
     json-object))
 
 
+(defun get-testing-jso ()
+  (get-sgd "YPL252C"))

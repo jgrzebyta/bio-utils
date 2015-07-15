@@ -40,24 +40,6 @@
 		 (setf (gethash "link" to-return) (getjso "link" item)))
 	    collect to-return))
 
-(defun --load-go (json-objects)
-  "Load Gene Ontology terms"
-  (let ((to-return (make-hash-table :test #'equal)))
-    (loop for term in '("molecular_function" "biological_process" "cellular_component")
-	  for term-nodes = nil
-	  for response-nodes = nil
-       do (progn
-	    (setq term-nodes (getjso term json-objects))
-	    (setq response-nodes
-		  (loop for node in term-nodes
-		     for response = nil
-		        do (setq response (--load-go-atom node))
-		     collect response))
-	    (setf (gethash term to-return) response-nodes))) ;; load return hash-table
-    to-return ;; return final result
-    )
-  )
-
 (defun --load-go2 (jso-go-terms)
   "Load Gene Ontology terms. Rewritten version of --load-go method"
   ;; Following return hash table has layout: [ <term> : (( go_id . go_term) ...) ]
@@ -82,10 +64,16 @@
 
 (defun --load-go-atom (go-atom)
   "Load Gene Ontology single atom"
-  (let ((format-name (getjso* "term.format_name" go-atom)))
+  (let ((to-return (make-hash-table :test #'equal))
+	(format-name (getjso* "term.format_name" go-atom)))
     (if (search "GO:" format-name)
-	(cons format-name (getjso* "term.display_name" go-atom))
-	nil)))
+	(progn
+	  (setf (gethash "format-name" to-return) format-name)
+	  (setf (gethash "display-name" to-return) (getjso* "term.display_name" go-atom))
+	  (setf (gethash "qualifiers" to-return) (car (getjso "qualifiers" go-atom))))
+	)
+    to-return))
+
 
 (defun --get-json-as-hashmap (json-object)
   "converts internal type of jso instance json-object into custom hashmap"
@@ -94,6 +82,7 @@
     (setf (gethash "format-name" to-return) (getjso "formatName" json-object))
     (setf (gethash "locus-id" to-return) (getjso "locusId" json-object))
     (setf (gethash "locus-link" to-return) (getjso "locusLink" json-object))
+    (setf (gethash "description" to-return) (getjso* "locusData.qualities.description.value" json-object))
     (setf (gethash "uniprot-id" to-return) (getjso* "locusData.uniprotid" json-object))
     (setf (gethash "aliases" to-return) (--load-aliases (getjso* "locusData.aliases" json-object)))
     (setf (gethash "go-terms" to-return) (--load-go2 (getjso* "locusData.go_overview" json-object)))

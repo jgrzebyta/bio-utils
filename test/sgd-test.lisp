@@ -72,6 +72,24 @@
 	 )))
 
 
+(lisp-unit2:define-test phenotype-test ()
+  "Tests for phenotype"
+  (let ((raw (get-testing-jso)))
+    (loop for experiment being the hash-keys in (gethash "phenotype" raw)
+       using (hash-value predicate-coll)
+       do (progn
+	    (format t "experiment type: ~s predicates: ~a~%" experiment predicate-coll)
+	    (assert-typep 'hash-table predicate-coll)
+	    (loop for predicate-name being the hash-keys in predicate-coll
+		 using (hash-value atoms)
+		 do (progn
+		      (assert-typep 'list atoms)
+		      (format t "~cpredicate: ~s atoms: ~d~%" #\Tab predicate-name (length atoms))
+		      (loop for atom in atoms
+			  do (assert-typep 'hash-table atom))))
+	    ))
+    )
+  )
 
 
 ;; Additional utils functions 

@@ -19,7 +19,7 @@
 (require 'st-json)
 
 (defun --get-bootstrap-json-as-string (in-string)
-  "Extract value of bootstappedData from IN-STRING and return as string."
+  "Extracts value of bootstappedData from IN-STRING and return as string."
   (let* ((parsed (html5-parser:parse-html5 in-string :dom :xmls))
 	 (head (nth 3 parsed))
 	 (script (nth 3 head))
@@ -30,7 +30,7 @@
       )))
 
 (defun --load-aliases (json-objects)
-  "Load 'locusData.qualities.aliases' field from json-object and load into return-hash."
+  "Loads 'locusData.qualities.aliases' field from json-object and load into return-hash."
 	 (loop for item in json-objects
 	       for to-return = (make-hash-table :test #'equal)
 	    do (progn
@@ -41,7 +41,7 @@
 	    collect to-return))
 
 (defun --load-go2 (jso-go-terms)
-  "Load Gene Ontology terms. Rewritten version of --load-go method"
+  "Loads Gene Ontology terms. Rewritten version of --load-go method"
   ;; Following return hash table has layout: [ <term> : (( go_id . go_term) ...) ]
   (let ((to-return (make-hash-table :test #'equal)))
     (progn
@@ -63,7 +63,7 @@
 
 
 (defun --load-go-atom (go-atom)
-  "Load Gene Ontology single atom"
+  "Loads Gene Ontology single atom"
   (let ((to-return (make-hash-table :test #'equal))
 	(format-name (getjso* "term.format_name" go-atom)))
     (if (search "GO:" format-name)
@@ -74,9 +74,40 @@
 	)
     to-return))
 
+(defun --load-phenotype (jso-phenotype)
+  "Exports phenotype from JSO instance. Returns a hash-table."
+  (let ((to-return (make-hash-table :test #'equal))) ;; a hash table with experiment types as keys
+    (mapjso #'(lambda (exp-k exp-v)
+		(let ((predicates-hash-table (make-hash-table :test #'equal))) ;; a hash table with predicates as keys
+		    (if (search "_phenotypes" exp-k) ;; for each of experiment types ...
+			;; ... read predicates
+			(progn
+			  (mapjso #'(lambda (pred-k pred-v)
+				      (setf (gethash pred-k predicates-hash-table)
+					    (loop for phenotype in pred-v
+					       for phe-atom-table = (--load-phenotype-atom phenotype)
+					       collect phe-atom-table))
+				      ) exp-v)
+			  (setf (gethash exp-k to-return) predicates-hash-table)))
+		    
+		))
+	    jso-phenotype)
+    to-return))
+
+
+(defun --load-phenotype-atom (jso-phenotype)
+  "Converts JSO phenotype atom into hash-table representation"
+  (let ((to-return (make-hash-table :test #'equal)))
+    (setf (gethash "display-name" to-return) (getjso "display_name" jso-phenotype))
+    (setf (gethash "link" to-return) (getjso "link" jso-phenotype))
+    (setf (gethash "format-name" to-return) (getjso "format_name" jso-phenotype))
+    to-return
+    )
+  )
+
 
 (defun --get-json-as-hashmap (json-object)
-  "converts internal type of jso instance json-object into custom hashmap"
+  "Converts internal type of jso instance json-object into custom hashmap"
   (let ((to-return (make-hash-table :test #'equal))) ;; probably the block of setf-s bellow might be shorter.
     (setf (gethash "display-name" to-return) (getjso "displayName" json-object))
     (setf (gethash "format-name" to-return) (getjso "formatName" json-object))
@@ -86,12 +117,13 @@
     (setf (gethash "uniprot-id" to-return) (getjso* "locusData.uniprotid" json-object))
     (setf (gethash "aliases" to-return) (--load-aliases (getjso* "locusData.aliases" json-object)))
     (setf (gethash "go-terms" to-return) (--load-go2 (getjso* "locusData.go_overview" json-object)))
+    (setf (gethash "phenotype" to-return) (--load-phenotype (getjso* "locusData.phenotype_overview" json-object)))
 	to-return
     )
 )
 
 (defun get-sgd (name)
-  "Return Saccharomyces Genome Database record identified by NAME as a hashmap."
+  "Returns Saccharomyces Genome Database record identified by NAME as a hash-table."
   (let* ((base-url (format nil "http://www.yeastgenome.org/search?query=~a" name))
 	 (page (drakma:http-request base-url))
 	 (json-string (handler-case

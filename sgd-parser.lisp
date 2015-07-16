@@ -48,12 +48,13 @@
       (loop for term in '("molecular_function" "biological_process" "cellular_component")
             for term-value = (gethash term to-return)
                 do (mapjso #'(lambda (k v) (if (search term k) ;; value v i a list of atomic go term
-				      (progn
 					(loop for atomic in v
 					    for atomic-parsed = (--load-go-atom atomic)
 					   append (if (not (null atomic-parsed))(list atomic-parsed) nil) into atomics
-					   finally (setf term-value (append atomics term-value))
-					    ))
+					   finally (progn
+						     (setq term-value (append atomics term-value))
+						     (setq term-value (remove-duplicates term-value :test #'equal :key #'(lambda (x) (gethash "format-name" x)))))
+					    )
 				      ))
 		  jso-go-terms)
 	 (setf (gethash term to-return) term-value))) ;; load return hash-table
@@ -68,7 +69,7 @@
 	(format-name (getjso* "term.format_name" go-atom)))
     (if (search "GO:" format-name)
 	(progn
-	  (setf (gethash "format-name" to-return) format-name)
+	  (setf (gethash "format-name" to-return) format-name)  ;; encodes GO:xxxxx value
 	  (setf (gethash "display-name" to-return) (getjso* "term.display_name" go-atom))
 	  (setf (gethash "qualifiers" to-return) (car (getjso "qualifiers" go-atom))))
 	)

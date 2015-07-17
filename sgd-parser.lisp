@@ -106,6 +106,15 @@
     )
   )
 
+(defun --get-protein (jso-protein)
+  "Parse protein record"
+  (let ((to-return (make-hash-table :test #'equal)))
+    (setf (gethash "molecular-weight" to-return) (getjso "molecular_weight" jso-protein))
+    (setf (gethash "length" to-return) (getjso "length" jso-protein))
+    (setf (gethash "isoelectric-p" to-return) (getjso "pi" jso-protein))
+    to-return
+    ))
+
 
 (defun --get-json-as-hashmap (json-object)
   "Converts internal type of jso instance json-object into custom hashmap"
@@ -119,9 +128,12 @@
     (setf (gethash "aliases" to-return) (--load-aliases (getjso* "locusData.aliases" json-object)))
     (setf (gethash "go-terms" to-return) (--load-go2 (getjso* "locusData.go_overview" json-object)))
     (setf (gethash "phenotype" to-return) (--load-phenotype (getjso* "locusData.phenotype_overview" json-object)))
+    (setf (gethash "protein" to-return) (--get-protein (getjso* "locusData.protein_overview" json-object)))
 	to-return
     )
 )
+
+
 
 (defun get-sgd (name)
   "Returns Saccharomyces Genome Database record identified by NAME as a hash-table."

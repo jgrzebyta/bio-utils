@@ -1,1 +1,1 @@
-A bunch of simple tools for Emacs.
+A bunch of simple bioinformatics tools.

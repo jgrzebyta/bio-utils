@@ -6,11 +6,14 @@
   :license "GPLv3"
   :depends-on (#:drakma
                #:cl-html5-parser
+	       #:cl-libxml2
                #:cl-ppcre
                #:st-json)
   :serial t
   :components ((:file "package")
-               (:file "sgd-parser")))
+               (:file "sgd-parser")
+	       (:file "search-ebi")
+	       (:file "normalise-fasta")))
 
 (asdf:defsystem #:bio-utils-test
   :depends-on (#:bio-utils #:lisp-unit2)

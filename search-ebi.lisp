@@ -15,6 +15,7 @@
 
 
 (defun generic-call (uri)
+  "Executes HTTP GET request to URI address and returns results as STRING. "
   (map 'string #'code-char (drakma:http-request uri :method :get :user-agent :firefox)))
 
 (defun call-ebi-eye (data-src term)
@@ -85,13 +86,14 @@
     results)
   )
 
-
+;; TODO: move that method into relevant test
 (defun test-call-ebi-eye ()
   (format t "result: ~a~%" (targets-ebi-eye-parser (libxml2.tree:parse (call-ebi-eye "uniprot" "cgd4_2720")))))
 
 ;;(test-call-ebi-eye)
 ;;(format t "~%~A~%" (call-ebi-eye "uniprot" "cgd4_2720"))
 
+;; TODO: move that method into relevant test
 (defun main ()
   (loop for line = (read-line *standard-input* nil)
      while line
@@ -104,8 +106,8 @@
 	      (format t "~a~C~a~C~a~%" line #\tab nil #\tab nil))
 	  )))
 
-
-(main)
+;; Prevent runing main function during compilation. It is not a script any more.
+;; (main)
 
 
 

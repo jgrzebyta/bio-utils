@@ -57,10 +57,10 @@ If has-extraline is true than extra empty line is added after each sequence.
   )
 )
 
-
+;; TODO: move that method to test
 (defun main ()
   (multiple-value-bind (queue data) (parse-input)
     (recover-fasta data :is-flat nil))
   )
 
-(main)
+;; (main)

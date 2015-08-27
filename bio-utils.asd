@@ -8,9 +8,11 @@
                #:cl-html5-parser
 	       #:cl-libxml2
                #:cl-ppcre
-               #:st-json)
+               #:st-json
+	       #:split-sequence)
   :serial t
   :components ((:file "package")
+	       (:file "utils")
                (:file "sgd-parser")
 	       (:file "search-ebi")
 	       (:file "normalise-fasta")))
@@ -19,4 +21,6 @@
   :depends-on (#:bio-utils #:lisp-unit2)
   :serial t
   :components ((:module "test"
-			:components ((:file "sgd-test")))))
+			:components ((:file "package")
+				     (:file "sgd-test")
+				     (:file "utils-test")))))

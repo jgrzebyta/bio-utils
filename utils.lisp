@@ -13,3 +13,14 @@ Final text is trimed with #\Tab and #\Space."
        collect (string-trim '(#\Tab #\Space) i))))
 
 
+(defun multiline-string-list (is sep)
+  "Do the same as STRING-LIST except build list of lists. 
+
+If IS is a multi lines string then in the first instance split it into list of lines. In the second spep parse each line using STRING-LIST funcion.
+Skip empty (length <= 0) line."
+  (let ((line-splited (split-sequence:split-sequence #\Newline is)))
+    (loop for line in line-splited
+	 if (> (length line) 0)
+         collect (string-list line sep))))
+
+

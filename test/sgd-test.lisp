@@ -2,10 +2,6 @@
 ;; (lisp-unit2:run-test 'bio-utils-test::<test name>) eg: (lisp-unit2:run-test 'bio-utils-test::sdb-ykl132c-test)
 
 
-(defpackage #:bio-utils-test
-  (:use :common-lisp :bio-utils :lisp-unit2))
-
-
 (in-package #:bio-utils-test)
 
 ;; (lisp-unit2:define-test sgd-simple-test

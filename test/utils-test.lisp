@@ -46,3 +46,13 @@ Jedzie, Jasiu, na, kobyle")
     (format t "result: ~S~% with size: ~d~%" result (length result))
     (format t "last line: ~S~%" last-line)
     (format t "element: ~S~%" word)))
+
+(lisp-unit2:define-test clean-citation-chars
+    ()
+  (let ((is-1 "Ale tekst")
+	(is-2 "\"Ale tekst\"")
+	(is-3 "\'Ale tekst\'"))
+    (lisp-unit2:assert-eql (length is-1) (length (bio-utils::string-remove-citations is-1)))
+    (lisp-unit2:assert-eql (length is-1) (length (bio-utils::string-remove-citations is-2)))
+    (lisp-unit2:assert-eql (length is-1) (length (bio-utils::string-remove-citations is-3)))
+    (format t "string before: ~S string after: ~S string expected: ~S~%" is-2 (bio-utils::string-remove-citations is-2) is-1)))

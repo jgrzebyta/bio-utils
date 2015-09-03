@@ -24,3 +24,6 @@ Skip empty (length <= 0) line."
          collect (string-list line sep))))
 
 
+(defun string-remove-citations (is)
+  "Remove citation characters #\' and #\\\" from IS string."
+  (string-trim '(#\' #\") is))

@@ -1,4 +1,4 @@
-
+;;;; 
  
 ;; Saccharomyces Genome Database web page parser
 ;; This parser collects information from yeast strain web page and converts it into useful hashmap.
@@ -34,10 +34,10 @@
 	 (loop for item in json-objects
 	       for to-return = (make-hash-table :test #'equal)
 	    do (progn
-		 (setf (gethash "category" to-return) (getjso "category" item))
-		 (setf (gethash "display-name" to-return) (getjso "display_name" item))
-		 (setf (gethash "source" to-return) (getjso* "source.display_name" item))
-		 (setf (gethash "link" to-return) (getjso "link" item)))
+		 (setf (gethash "category" to-return) (st-json:getjso "category" item))
+		 (setf (gethash "display-name" to-return) (st-json:getjso "display_name" item))
+		 (setf (gethash "source" to-return) (st-json:getjso* "source.display_name" item))
+		 (setf (gethash "link" to-return) (st-json:getjso "link" item)))
 	    collect to-return))
 
 (defun --load-go2 (jso-go-terms)
@@ -47,7 +47,7 @@
     (progn
       (loop for term in '("molecular_function" "biological_process" "cellular_component")
             for term-value = (gethash term to-return)
-                do (mapjso #'(lambda (k v) (if (search term k) ;; value v i a list of atomic go term
+                do (st-json:mapjso #'(lambda (k v) (if (search term k) ;; value v i a list of atomic go term
 					(loop for atomic in v
 					    for atomic-parsed = (--load-go-atom atomic)
 					   append (if (not (null atomic-parsed))(list atomic-parsed) nil) into atomics
@@ -66,24 +66,24 @@
 (defun --load-go-atom (go-atom)
   "Loads Gene Ontology single atom"
   (let ((to-return (make-hash-table :test #'equal))
-	(format-name (getjso* "term.format_name" go-atom)))
+	(format-name (st-json:getjso* "term.format_name" go-atom)))
     (if (search "GO:" format-name)
 	(progn
 	  (setf (gethash "format-name" to-return) format-name)  ;; encodes GO:xxxxx value
-	  (setf (gethash "display-name" to-return) (getjso* "term.display_name" go-atom))
-	  (setf (gethash "qualifiers" to-return) (car (getjso "qualifiers" go-atom))))
+	  (setf (gethash "display-name" to-return) (st-json:getjso* "term.display_name" go-atom))
+	  (setf (gethash "qualifiers" to-return) (car (st-json:getjso "qualifiers" go-atom))))
 	)
     to-return))
 
 (defun --load-phenotype (jso-phenotype)
   "Exports phenotype from JSO instance. Returns a hash-table."
   (let ((to-return (make-hash-table :test #'equal))) ;; a hash table with experiment types as keys
-    (mapjso #'(lambda (exp-k exp-v)
+    (st-json:mapjso #'(lambda (exp-k exp-v)
 		(let ((predicates-hash-table (make-hash-table :test #'equal))) ;; a hash table with predicates as keys
 		    (if (search "_phenotypes" exp-k) ;; for each of experiment types ...
 			;; ... read predicates
 			(progn
-			  (mapjso #'(lambda (pred-k pred-v)
+			  (st-json:mapjso #'(lambda (pred-k pred-v)
 				      (setf (gethash pred-k predicates-hash-table)
 					    (loop for phenotype in pred-v
 					       for phe-atom-table = (--load-phenotype-atom phenotype)
@@ -99,9 +99,9 @@
 (defun --load-phenotype-atom (jso-phenotype)
   "Converts JSO phenotype atom into hash-table representation"
   (let ((to-return (make-hash-table :test #'equal)))
-    (setf (gethash "display-name" to-return) (getjso "display_name" jso-phenotype))
-    (setf (gethash "link" to-return) (getjso "link" jso-phenotype))
-    (setf (gethash "format-name" to-return) (getjso "format_name" jso-phenotype))
+    (setf (gethash "display-name" to-return) (st-json:getjso "display_name" jso-phenotype))
+    (setf (gethash "link" to-return) (st-json:getjso "link" jso-phenotype))
+    (setf (gethash "format-name" to-return) (st-json:getjso "format_name" jso-phenotype))
     to-return
     )
   )
@@ -109,9 +109,9 @@
 (defun --get-protein (jso-protein)
   "Parse protein record"
   (let ((to-return (make-hash-table :test #'equal)))
-    (setf (gethash "molecular-weight" to-return) (getjso "molecular_weight" jso-protein))
-    (setf (gethash "length" to-return) (getjso "length" jso-protein))
-    (setf (gethash "isoelectric-p" to-return) (getjso "pi" jso-protein))
+    (setf (gethash "molecular-weight" to-return) (st-json:getjso "molecular_weight" jso-protein))
+    (setf (gethash "length" to-return) (st-json:getjso "length" jso-protein))
+    (setf (gethash "isoelectric-p" to-return) (st-json:getjso "pi" jso-protein))
     to-return
     ))
 
@@ -119,16 +119,16 @@
 (defun --get-json-as-hashmap (json-object)
   "Converts internal type of jso instance json-object into custom hashmap"
   (let ((to-return (make-hash-table :test #'equal))) ;; probably the block of setf-s bellow might be shorter.
-    (setf (gethash "display-name" to-return) (getjso "displayName" json-object))
-    (setf (gethash "format-name" to-return) (getjso "formatName" json-object))
-    (setf (gethash "locus-id" to-return) (getjso "locusId" json-object))
-    (setf (gethash "locus-link" to-return) (getjso "locusLink" json-object))
-    (setf (gethash "description" to-return) (getjso* "locusData.qualities.description.value" json-object))
-    (setf (gethash "uniprot-id" to-return) (getjso* "locusData.uniprotid" json-object))
-    (setf (gethash "aliases" to-return) (--load-aliases (getjso* "locusData.aliases" json-object)))
-    (setf (gethash "go-terms" to-return) (--load-go2 (getjso* "locusData.go_overview" json-object)))
-    (setf (gethash "phenotype" to-return) (--load-phenotype (getjso* "locusData.phenotype_overview" json-object)))
-    (setf (gethash "protein" to-return) (--get-protein (getjso* "locusData.protein_overview" json-object)))
+    (setf (gethash "display-name" to-return) (st-json:getjso "displayName" json-object))
+    (setf (gethash "format-name" to-return) (st-json:getjso "formatName" json-object))
+    (setf (gethash "locus-id" to-return) (st-json:getjso "locusId" json-object))
+    (setf (gethash "locus-link" to-return) (st-json:getjso "locusLink" json-object))
+    (setf (gethash "description" to-return) (st-json:getjso* "locusData.qualities.description.value" json-object))
+    (setf (gethash "uniprot-id" to-return) (st-json:getjso* "locusData.uniprotid" json-object))
+    (setf (gethash "aliases" to-return) (--load-aliases (st-json:getjso* "locusData.aliases" json-object)))
+    (setf (gethash "go-terms" to-return) (--load-go2 (st-json:getjso* "locusData.go_overview" json-object)))
+    (setf (gethash "phenotype" to-return) (--load-phenotype (st-json:getjso* "locusData.phenotype_overview" json-object)))
+    (setf (gethash "protein" to-return) (--get-protein (st-json:getjso* "locusData.protein_overview" json-object)))
 	to-return
     )
 )

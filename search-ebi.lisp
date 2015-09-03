@@ -94,17 +94,17 @@
 ;;(format t "~%~A~%" (call-ebi-eye "uniprot" "cgd4_2720"))
 
 ;; TODO: move that method into relevant test
-(defun main ()
-  (loop for line = (read-line *standard-input* nil)
-     while line
-     do (let* ((in (libxml2.tree:parse (call-ebi-eye "uniprot" line)))
-	       (results (targets-ebi-eye-parser in)))
-	  (if (> (hash-table-count results) 0)
-	      (loop for key being the hash-keys in results
-		    using (hash-value value)
-		 do (format t "~a~C~a~C~a~%" line #\tab key #\tab (car value)))
-	      (format t "~a~C~a~C~a~%" line #\tab nil #\tab nil))
-	  )))
+;; (defun main ()
+;;   (loop for line = (read-line *standard-input* nil)
+;;      while line
+;;      do (let* ((in (libxml2.tree:parse (call-ebi-eye "uniprot" line)))
+;; 	       (results (targets-ebi-eye-parser in)))
+;; 	  (if (> (hash-table-count results) 0)
+;; 	      (loop for key being the hash-keys in results
+;; 		    using (hash-value value)
+;; 		 do (format t "~a~C~a~C~a~%" line #\tab key #\tab (car value)))
+;; 	      (format t "~a~C~a~C~a~%" line #\tab nil #\tab nil))
+;; 	  )))
 
 ;; Prevent runing main function during compilation. It is not a script any more.
 ;; (main)

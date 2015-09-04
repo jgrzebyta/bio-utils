@@ -9,7 +9,8 @@
 	       #:cl-libxml2
                #:cl-ppcre
                #:st-json
-	       #:split-sequence)
+	       #:split-sequence
+	       #:ironclad)
   :serial t
   :components ((:file "package")
 	       (:file "utils")

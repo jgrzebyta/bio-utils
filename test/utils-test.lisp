@@ -56,3 +56,15 @@ Jedzie, Jasiu, na, kobyle")
     (lisp-unit2:assert-eql (length is-1) (length (bio-utils::string-remove-citations is-2)))
     (lisp-unit2:assert-eql (length is-1) (length (bio-utils::string-remove-citations is-3)))
     (format t "string before: ~S string after: ~S string expected: ~S~%" is-2 (bio-utils::string-remove-citations is-2) is-1)))
+
+
+(lisp-unit2:define-test test-sha1-uniq
+    ()
+  (let ((collection (make-array 10000 :adjustable t :element-type 'string :fill-pointer 0))
+	(if-valid nil))
+    ;; fill an array COLLECTION with 10000 strings
+    (dotimes (i 10000)
+      (vector-push-extend (bio-utils::generate-sha1) collection))
+    (setq if-valid (= (length collection) (length (remove-duplicates collection :test #'equal))))
+    (format t "were duplicates found: ~b~%" (not if-valid))
+    (assert-true if-valid)))

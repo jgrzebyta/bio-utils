@@ -5,5 +5,6 @@
   (:use #:cl)
   (:export :get-sgd
 	   :string-list
-	   :multiline-string-list))
+	   :multiline-string-list
+	   :generate-sha1))
 

@@ -137,7 +137,9 @@
 
 (defun get-sgd (name)
   "Returns Saccharomyces Genome Database record identified by NAME as a hash-table."
-  (let* ((base-url (format nil "http://www.yeastgenome.org/search?query=~a" name))
+  (let* ((base-url (format nil
+			   (lambda () (cdr (assoc "yeast-genome-search" *data-sources* :test #'equal)))
+			   name))
 	 (page (drakma:http-request base-url))
 	 (json-string (handler-case
 			  (--get-bootstrap-json-as-string page)

@@ -13,6 +13,7 @@
 	       #:ironclad)
   :serial t
   :components ((:file "package")
+	       (:file "constants")
 	       (:file "utils")
                (:file "sgd-parser")
 	       (:file "search-ebi")

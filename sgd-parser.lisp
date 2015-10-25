@@ -140,7 +140,7 @@
   (let* ((base-url (format nil
 			   (lambda () (cdr (assoc "yeast-genome-search" *data-sources* :test #'equal)))
 			   name))
-	 (page (drakma:http-request base-url))
+	 (page (drakma:http-request base-url :method :get :user-agent :firefox))
 	 (json-string (handler-case
 			  (--get-bootstrap-json-as-string page)
 			(error () (return-from get-sgd nil))))

@@ -1,7 +1,7 @@
 (in-package #:bio-utils)
 
-(require 'drakma)
 (require 'cl-libxml2)
+(require 'drakma)
 
 (
  #-SBCL defconstant
@@ -13,10 +13,6 @@
 		     ("ebi-eye-xref-id" . "http://www.ebi.ac.uk/ebisearch/ws/rest/~a/entry/~a/xref/~a")) ;; display xref with domain specific ID
     #'equal) 
 
-
-(defun generic-call (uri)
-  "Executes HTTP GET request to URI address and returns results as STRING. "
-  (map 'string #'code-char (drakma:http-request uri :method :get :user-agent :firefox)))
 
 (defun call-ebi-eye (data-src term)
   "Call EBI eye REST service"
@@ -46,7 +42,7 @@
   (let* ((db-pattern (cdr (assoc "ebi-eye-description" +data-sources+ :test 'equal)))
 	 (uri-request (format nil db-pattern data-src)))
     (format t "uri: ~s ~%" uri-request)
-    (generic-call uri-request)))
+    (drakma:http-request uri-request :method :get :user-agent :firefox)))
 
 
 ;; (defun call-uniprot (term)

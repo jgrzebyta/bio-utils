@@ -16,6 +16,7 @@
 	       (:file "constants")
 	       (:file "utils")
                (:file "sgd-parser")
+	       (:file "ae-parser")
 	       (:file "search-ebi")
 	       (:file "normalise-fasta")))
 

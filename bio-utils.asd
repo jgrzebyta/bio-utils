@@ -13,12 +13,14 @@
 	       #:ironclad)
   :serial t
   :components ((:file "package")
+	       (:file "core")
 	       (:file "constants")
 	       (:file "utils")
                (:file "sgd-parser")
 	       (:file "ae-parser")
 	       (:file "search-ebi")
-	       (:file "normalise-fasta")))
+	       (:file "normalise-fasta")
+	       (:file "yst-parser")))
 
 (asdf:defsystem #:bio-utils-test
   :depends-on (#:bio-utils #:lisp-unit2)

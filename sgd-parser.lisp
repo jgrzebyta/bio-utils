@@ -18,6 +18,18 @@
 (require 'cl-ppcre)
 (require 'st-json)
 
+
+(defclass sgd-locus-parser (parser)
+  (:documentation "This is instance of SGD Search parser."))
+
+(defmethod initialize-instance :after
+    ((c sgd-search-parser) &rest args)
+  (setf (name c) "SGD locus parser")
+  (setf (xref-name c) "sgd-locus")
+  (setf (xref-ns c) "")  ;; it depends on outcome
+  (setf (url c) "http://www.yeastgenome.org/search?query=~a"))
+
+
 (defun --get-bootstrap-json-as-string (in-string)
   "Extracts value of bootstappedData from IN-STRING and return as string."
   (let* ((parsed (html5-parser:parse-html5 in-string :dom :xmls))
@@ -42,7 +54,7 @@
 
 (defun --load-go2 (jso-go-terms)
   "Loads Gene Ontology terms. Rewritten version of --load-go method"
-  ;; Following return hash table has layout: [ <term> : (( go_id . go_term) ...) ]
+  ;; Returns hash table has layout: [ <term> : (( go_id . go_term) ...) ]
   (let ((to-return (make-hash-table :test #'equal)))
     (progn
       (loop for term in '("molecular_function" "biological_process" "cellular_component")
@@ -57,9 +69,9 @@
 					    )
 				      ))
 		  jso-go-terms)
-	 (setf (gethash term to-return) term-value))) ;; load return hash-table
+	 (setf (gethash term to-return) term-value))) ;; loads return hash-table
    ;; (format t "output: ~a ~%" to-return)
-    to-return ;; return final result
+    to-return ;; returns final result
     ))
 
 

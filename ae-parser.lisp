@@ -11,6 +11,7 @@
 
 
 (defun puthash (attr value ht)
+  "Provides compatibility with emacs lisp"
   (if (not (hash-table-p ht)) (error "the last parameter is not a hash-table" ))
   (setf (gethash attr ht) value))
 
@@ -52,7 +53,7 @@
 	 (pages (value-single-node bibliography-node "pages"))
 	 (publication (value-single-node bibliography-node "publication"))
 	 (volume (value-single-node bibliography-node "volume"))
-	 (year (value-single-node bibliography-node "year")) 
+	 (year (value-single-node bibliography-node "year")))
     (puthash 'accession accession to-return)
     (puthash 'authors authors to-return)
     (puthash 'title title to-return)
@@ -62,7 +63,7 @@
     (puthash 'volume volume to-return)
     (puthash 'year year to-return)
     to-return
-    )))
+    ))
 
 
 ;; fixed main method

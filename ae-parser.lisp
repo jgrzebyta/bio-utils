@@ -4,45 +4,56 @@
 (require 'cl-libxml2)
 (require 'drakma)
 
+
+;; some utilities
+(defun value-single-node (obj xpath)
+  (libxml2.tree:text-content (libxml2.xpath:find-single-node obj xpath)))
+
+
+(defun puthash (attr value ht)
+  "Provides compatibility with emacs lisp"
+  (if (not (hash-table-p ht)) (error "the last parameter is not a hash-table" ))
+  (setf (gethash attr ht) value))
+
+;;;; END
+
+
 (defun --sampleattribute-nodes-parser (sampleattribute-nodes)
   "Returns sampleattribute list"
-  (let ((to-return (make-hash-table :test 'equal)))
+  (let ((to-return (make-hash-table)))
     (loop for node in sampleattribute-nodes
-	  for category = (first (xml-node-children (car (xml-get-children node 'category))))
-	  for value-nodes = (xml-get-children node 'value)
-	  for value = (loop for v in value-nodes
-			    for v-value = (first (xml-node-children v))
-			    collect v-value
-			    )
-	  do (puthash category value to-return)
-	  )
+       for category = (value-single-node node "category")
+       for value-nodes = (libxml2.xpath:find-list node "value")
+       for values = (loop for v in value-nodes
+			    collect (libxml2.tree:text-content v))
+	  do (progn 
+	       (puthash 'category category to-return)
+	       (puthash 'values values to-return)))
     to-return))
 
 
 (defun --experimental-factor-parser (experimental-factor-node)
   "Parse experimental factor description from EXPERIMENAL-FACTOR-NODE."
   (let ((to-return (make-hash-table))
-	(name (first (xml-node-children (car (xml-get-children experimental-factor-node 'name)))))
-	(value-nodes (loop for v in (xml-get-children experimental-factor-node 'value)
-			   collect (first (xml-node-children v)))))
+	(name (value-single-node experimental-factor-node "name"))
+	(values (loop for v in (libxml2.xpath:find-list experimental-factor-node "value")
+			   collect (libxml2.tree:text-content v))))
     (puthash 'name name to-return)
-    (puthash 'values value-nodes to-return)
-    to-return
-    ))
+    (puthash 'values values to-return)
+    to-return))
 
-
-(defun --bibliography-parser (experimental-factor-node)
+(defun --bibliography-parser (experiment-node)
   "Parse bibliography record from EXPERIMENAL-FACTOR-NODE."
   (let* ((to-return (make-hash-table))
-	 (bibliography-node (car (xml-get-children experimental-factor-node 'bibliography)))
-	 (accession (car (xml-node-children (car (xml-get-children bibliography-node 'accession)))))
-	 (authors (car (xml-node-children (car (xml-get-children bibliography-node 'authors)))))
-	 (title (car (xml-node-children (car (xml-get-children bibliography-node 'title)))))
-	 (issue (car (xml-node-children (car (xml-get-children bibliography-node 'issue)))))
-	 (pages (car (xml-node-children (car (xml-get-children bibliography-node 'pages)))))
-	 (publication (car (xml-node-children (car (xml-get-children bibliography-node 'publication)))))
-	 (volume (car (xml-node-children (car (xml-get-children bibliography-node 'volume)))))
-	 (year (car (xml-node-children (car (xml-get-children bibliography-node 'year))))))
+	 (bibliography-node (libxml2.xpath:find-single-node experiment-node "bibliography"))
+	 (accession (value-single-node bibliography-node "accession"))
+	 (authors (value-single-node bibliography-node "authors"))
+	 (title (value-single-node bibliography-node "title"))
+	 (issue (value-single-node bibliography-node "issue"))
+	 (pages (value-single-node bibliography-node "pages"))
+	 (publication (value-single-node bibliography-node "publication"))
+	 (volume (value-single-node bibliography-node "volume"))
+	 (year (value-single-node bibliography-node "year")))
     (puthash 'accession accession to-return)
     (puthash 'authors authors to-return)
     (puthash 'title title to-return)
@@ -62,14 +73,13 @@
 	 (page (libxml2.tree:parse output-string))
 	 (to-return (make-hash-table))
 	 (experiments (libxml2.xpath:find-single-node page "//experiments"))
-	 (experiments-attrs (load-experiments-attributes experiments))
+        ;;	 (experiments-attrs (load-experiments-attributes experiments)) ;; This line's result is not used
 	 (experiment-node (libxml2.xpath:find-single-node experiments "experiment"))
 	 (experimental-factor-node (libxml2.xpath:find-single-node experiment-node "experimentalfactor"))
-	 (description-node (libxml2.xpath:find-single-node experiment-node "description"))
-	 (description-text (libxml2.tree:text-content (libxml2.xpath:find-single-node description-node "text")))
+	 (description-text (value-single-node experiment-node "description/text"))
 	 (sampleattribute-nodes (libxml2.xpath:find-list experiment-node "sampleattribute"))
-	 (name (libxml2.tree:text-content (libxml2.xpath:find-single-node experiment-node "name"))))
-    (message "name: %S" name)
+	 (name (value-single-node experiment-node "name")))
+    (format *error-output* "name: ~S~%" name)
     (puthash 'accession accession to-return)
     (puthash 'name name to-return)
     (puthash 'experimental-factor (--experimental-factor-parser experimental-factor-node) to-return)
@@ -86,12 +96,12 @@
 				   (rev "revision")
 				   (total "total")
 				   (tot-sampl "total-samples")
-				   (tot-assays "total-assays")) experiment-nodes
+				   (tot-assays "total-assays")) experiments-node
       (acons 'version ver to-return)
       (acons 'revision rev to-return)
       (acons 'total total to-return)
-      (acons 'total-sampl to-return)
-      (acons 'total-assays to-return))
+      (acons 'total-sampl tot-sampl to-return)
+      (acons 'total-assays tot-assays to-return))
     to-return))
 
 

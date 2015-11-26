@@ -18,12 +18,12 @@
 (require 'cl-ppcre)
 (require 'st-json)
 
-
+;; This is instance of SGD Search parser.
 (defclass sgd-locus-parser (parser)
-  (:documentation "This is instance of SGD Search parser."))
+  ())
 
 (defmethod initialize-instance :after
-    ((c sgd-search-parser) &rest args)
+    ((c sgd-locus-parser) &rest args)
   (setf (name c) "SGD locus parser")
   (setf (xref-name c) "sgd-locus")
   (setf (xref-ns c) "")  ;; it depends on outcome
@@ -142,21 +142,16 @@
     (setf (gethash "phenotype" to-return) (--load-phenotype (st-json:getjso* "locusData.phenotype_overview" json-object)))
     (setf (gethash "protein" to-return) (--get-protein (st-json:getjso* "locusData.protein_overview" json-object)))
 	to-return
-    )
-)
+    ))
 
 
 
-(defun get-sgd (name)
-  "Returns Saccharomyces Genome Database record identified by NAME as a hash-table."
-  (let* ((base-url (format nil
-			   (lambda () (cdr (assoc "yeast-genome-search" *data-sources* :test #'equal)))
-			   name))
-	 (page (drakma:http-request base-url :method :get :user-agent :firefox))
-	 (json-string (handler-case
+(defmethod request ((par sgd-locus-parser) req)
+    "Returns Saccharomyces Genome Database record identified by NAME as a hash-table."
+    (let* ((base-url (format nil (url par)) req)
+	   (page (drakma:http-request base-url :method :get :user-agent :firefox))
+	   (json-string (handler-case
 			  (--get-bootstrap-json-as-string page)
-			(error () (return-from get-sgd nil))))
-	 (json-object (st-json:read-json-from-string json-string)))
+			  (error () (return-from request nil))))
+	   (json-object (st-json:read-json-from-string json-string)))
     (--get-json-as-hashmap json-object)))
-
-

@@ -3,11 +3,15 @@
 (defpackage #:bio-utils
   (:nicknames #:bio)
   (:use #:cl)
-  (:export :parser
+  (:export ;; parsers
+           :parser
+	   :sgd-locus-parser
+	   ;; end classes
+	   
 	   :parse-stream
 	   :parse-string
+	   :request
            :*data-sources*
-           :get-sgd
 	   :string-list
 	   :multiline-string-list
 	   :generate-sha1))

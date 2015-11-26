@@ -1,8 +1,9 @@
 ;;;; -*- Mode: Lisp; Syntax: ANSI-Common-Lisp -*-
 
 ;; Metadata class for a parser.
+;; Basic class for all parsers. Instance of that class handles parser matadata.
+;; The main parsing job is done 'request' by method.
 (defclass parser ()
-  (:documentation "Basic class for all parsers. Instance of the class handles parser matadata. The main parsing job is done by methods.")
   ((name :accessor name :documentation "This parser name")
    (xref-name :accessor xref-name :documentation "Parser's target name - 1 word")
    (url :accessor url :documentation "This is functional URL pattern for parser. Eg. Uniprot RDF might be 'http://www.uniprot.org/uniprot/~a.rdf'. ")

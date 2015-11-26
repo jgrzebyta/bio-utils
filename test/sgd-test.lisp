@@ -8,9 +8,11 @@
 ;;     ()
 ;;  (format t "data str: ~%~a~%" (inspect (get-sgd "YPL252C"))))
 
+
 (lisp-unit2:define-test sgd-simple-hashtable-test
     ()
-  (let* ((record (get-sgd "YPL252C"))
+  (let* ((parser (make-instance 'sgd-locus-parser))
+	 (record (request parser "YPL252C"))
 	 (display-name (gethash "display-name" record))
 	 (uniprot-id (gethash "uniprot-id" record)))
     (format t "data: ~a ~a ~a ~%" record display-name uniprot-id)
@@ -20,7 +22,8 @@
 
 (lisp-unit2:define-test sgd-simple-key-test
     ()
-  (let ((result (get-sgd "YPL252C")))
+  (let* ((parser (make-instance 'sgd-locus-parser))
+	 (result (request parser "YPL252C")))
     (loop for k being the hash-keys of result
 	 do (format t "hash key: ~s~%" k))
     ))
@@ -28,7 +31,8 @@
 
 (lisp-unit2:define-test go-YKL132C-test ()
   "Test GO terms for that ORF"
-  (let* ((result (get-sgd "YKL132C"))
+  (let* ((parser (make-instance 'sgd-locus-parser))
+	 (result (request parser "YKL132C"))
 	 (go-terms (gethash "go-terms" result)))
     (assert-true (not (null go-terms)))
     (format t "keys:~%")
